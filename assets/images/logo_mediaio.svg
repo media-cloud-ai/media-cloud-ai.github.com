@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="750"
+   height="750"
+   viewBox="0, 0, 600, 600"
+   id="svg2">
+
+   <defs>
+      <linearGradient id="gradientDash"
+         x1="0" y1="100%" x2="0" y2="0">
+         <stop offset="0%" stop-color="rgb(57,101,172)" />
+         <stop offset="50%" stop-color="rgb(57,101,172)" />
+         <stop offset="50%" stop-color="#fff" />
+         <stop offset="60%" stop-color="#fff" />
+         <stop offset="60%" stop-color="rgb(57,101,172)" />
+         <stop offset="70%" stop-color="rgb(57,101,172)" />
+         <stop offset="70%" stop-color="#fff" />
+         <stop offset="77%" stop-color="#fff" />
+         <stop offset="77%" stop-color="rgb(57,101,172)" />
+         <stop offset="82%" stop-color="rgb(57,101,172)" />
+         <stop offset="82%" stop-color="#fff" />
+         <stop offset="86%" stop-color="#fff" />
+         <stop offset="86%" stop-color="rgb(57,101,172)" />
+         <stop offset="88%" stop-color="rgb(57,101,172)" />
+         <stop offset="88%" stop-color="#fff" />
+         <stop offset="90%" stop-color="#fff" />
+         <stop offset="90%" stop-color="rgb(57,101,172)" />
+         <stop offset="91%" stop-color="rgb(57,101,172)" />
+         <stop offset="91%" stop-color="#fff" />
+         <stop offset="100%" stop-color="#fff" />
+      </linearGradient>
+      <linearGradient id="gradientName"
+         x1="0" y1="100%" x2="0" y2="0">
+         <stop offset="0%" stop-color="rgb(57,101,172)" />
+         <stop offset="50%" stop-color="rgb(57,101,172)" />
+         <stop offset="100%" stop-color="rgb(235,239,246)" />
+      </linearGradient>
+   </defs>
+
+  <g transform="translate(300, 300)">
+
+      <circle cx="0" cy="0" r="250" fill="#fff" />
+
+      <path
+         d="m 0,0 q 25 -3 50 0 l 0,460 q -25 3 -50 0 z"
+         transform="rotate(-90) translate(-25, -230)"
+         style="fill:rgb(235,239,246)"/>
+
+      <path
+         d="m 0,0 q 25 -3 50 0 l 0,460 q -25 3 -50 0 z"
+         transform="rotate(-67.5) translate(-25, -230)"
+         style="fill:rgb(216,224,238)"/>
+
+      <path
+         d="m 0,0 q 25 -3 50 0 l 0,460 q -25 3 -50 0 z"
+         transform="rotate(-45) translate(-25, -230)"
+         style="fill:rgb(196,209,230)"/>
+
+      <path
+         d="m 0,0 q 25 -3 50 0 l 0,460 q -25 3 -50 0 z"
+         transform="rotate(-22.5) translate(-25, -230)"
+         style="fill:rgb(176,194,222)"/>
+
+<!--       <path
+         d="m 0,0 q 25 -3 50 0 l 0,460 q -25 3 -50 0 z"
+         transform="translate(-25, -230)"
+         style="fill:url(#gradientDash)"/>
+ -->
+      <!-- <path
+         d="m 0,0 q 25 -3 50 0 l 0,460 q -25 3 -50 0 z"
+         transform="translate(-25, -230)"
+         style="fill:url(#gradientName)"/> -->
+
+      <path
+         d="m 0,0 q 25 -3 50 0 l 0,460 q -25 3 -50 0 z"
+         transform="translate(-25, -230)"
+         style="fill:rgb(57,101,172)"/>
+
+      <circle cx="0" cy="0" r="250" stroke="rgb(57,101,172)" stroke-width="20"
+         fill-opacity="0" />
+  </g>
+</svg>
