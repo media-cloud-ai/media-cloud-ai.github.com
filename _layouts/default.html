@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-
+    <link rel="icon" type="image/png" href="/assets/images/{{ site.favicon }}">
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
       <script>
@@ -38,6 +38,15 @@
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
         {% endif %}
+        <span class="site-footer-credits">This project is developped &amp; supported by:</span>
+        <div style="text-align: center;">
+          <a href="https://media-io.com" target="_blank">
+            <img src="/assets/images/logo_media_io.png" width="40%" style="vertical-align: middle;">
+          </a>
+          <a href="http://idfrancetv.fr/" target="_blank">
+            <img src="/assets/images/france_televisions_innovations_et_developpements.png" width="40%" style="vertical-align: middle;">
+          </a>
+        </div>
       </footer>
     </main>
   </body>
