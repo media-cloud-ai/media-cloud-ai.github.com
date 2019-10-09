@@ -36,17 +36,17 @@ class W3 green
 
 The core component is the backend, which provide user managment, workflow engine and monitoring.
 
-### Available workers
+### Available workers in Open-Source
 
-- [x] Transfer: across S3, FTP, HTTP, local storages
-- [x] File System: list, remove, copy files
-- [x] Manifest: DASH and ISM manifest manipulations
-- [x] Command line: to execute any command line available
-- [x] FFmpeg: to manipulate any video and audio formats
-- [x] Loudness: measure loudness on audio content
-- [x] ADM Engine: manipulate Audio Oriented objets
+- Transfer: across S3, FTP, HTTP, local storages
+- File System: list, remove, copy files
+- Manifest: DASH and ISM manifest manipulations
+- Command line: to execute any command line available
+- FFmpeg: to manipulate any video and audio formats
+- Loudness: measure loudness on audio content
+- ADM Engine: manipulate Audio Oriented objets
 
 ### Deployment
 
-The entire project is currently deployed using [Kubernetes](https://kubernetes.io).  
-Every part of the platform is builded into Docker images and can be deployed easilly with the [startup](https://github.com/media-cloud-ai/startup) project.  
+The entire project is currently deployed using [Kubernetes](https://kubernetes.io){:target="_blank"}.  
+Every part of the platform is builded into Docker images and can be deployed easilly with the [startup](https://github.com/media-cloud-ai/startup){:target="_blank"} project.  
