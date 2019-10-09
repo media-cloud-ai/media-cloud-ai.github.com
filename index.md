@@ -50,3 +50,15 @@ The core component is the backend, which provide user managment, workflow engine
 
 The entire project is currently deployed using [Kubernetes](https://kubernetes.io){:target="_blank"}.  
 Every part of the platform is builded into Docker images and can be deployed easilly with the [startup](https://github.com/media-cloud-ai/startup){:target="_blank"} project.  
+
+### Developement stack
+
+The frontend is designed using [Angular.io](https://angular.io){:target="_blank"}  
+![Angular.io](/assets/images/angular-icon.svg)
+
+The backend use the power of [Elixir](https://elixir-lang.org/){:target="_blank"}, based on [ERLang](https://www.erlang.org/){:target="_blank"} to provide a resilient and efficient backend.
+![Elixir](/assets/images/elixir.png)
+
+Most of workers are using [Rust](https://www.rust-lang.org/){:target="_blank"}, high-typed language and with performances similar to C/C++ applications.
+Using FFI (Foreign Function Interface), it allows to call any library which provide a C API.
+![Rust](/assets/images/rust.svg)
