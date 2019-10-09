@@ -54,11 +54,11 @@ Every part of the platform is builded into Docker images and can be deployed eas
 ### Developement stack
 
 The frontend is designed using [Angular.io](https://angular.io){:target="_blank"}  
-![Angular.io](/assets/images/angular-icon.svg)
+![Angular.io](/assets/images/angular-icon.svg){:height="100px"; display: block; margin: 0 auto;}
 
 The backend use the power of [Elixir](https://elixir-lang.org/){:target="_blank"}, based on [ERLang](https://www.erlang.org/){:target="_blank"} to provide a resilient and efficient backend.
-![Elixir](/assets/images/elixir.png)
+![Elixir](/assets/images/elixir.png){:height="100px"; display: block; margin: 0 auto;}
 
 Most of workers are using [Rust](https://www.rust-lang.org/){:target="_blank"}, high-typed language and with performances similar to C/C++ applications.
 Using FFI (Foreign Function Interface), it allows to call any library which provide a C API.
-![Rust](/assets/images/rust.svg)
+![Rust](/assets/images/rust.svg){:height="100px"; display: block; margin: 0 auto;}
