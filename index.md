@@ -43,8 +43,8 @@ The core component is the backend, which provide user managment, workflow engine
 - Manifest: DASH and ISM manifest manipulations
 - Command line: to execute any command line available
 - FFmpeg: to manipulate any video and audio formats
-- Loudness: measure loudness on audio content
-- ADM Engine: manipulate Audio Oriented objets
+- Loudness: loudness measurements of audio content ([ITU-R BS.1770-4](https://www.itu.int/rec/R-REC-BS.1770/recommendation.asp?lang=fr&parent=R-REC-BS.1770-4-201510-I){:target="_blank"})
+- ADM Engine: renderer for Object-Based Audio (ITU-R BS.2076-1](https://www.itu.int/rec/R-REC-BS.2076-1-201706-I/fr){:target="_blank"})
 
 ### Deployment
 
@@ -63,7 +63,7 @@ The backend use the power of [Elixir](https://elixir-lang.org/){:target="_blank"
   <img height="100px" src="/assets/images/elixir.png">
 </p>
 
-Most of workers are using [Rust](https://www.rust-lang.org/){:target="_blank"}, high-typed language and with performances similar to C/C++ applications.
+Most of workers are using [Rust](https://www.rust-lang.org/){:target="_blank"}, high-typed language with performances similar to C/C++ applications.
 Using FFI (Foreign Function Interface), it allows to call any library which provide a C API.
 <p align="center">
   <img height="100px" src="/assets/images/rust.svg">
