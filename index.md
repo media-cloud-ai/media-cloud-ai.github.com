@@ -46,6 +46,12 @@ The core component is the backend, which provide user managment, workflow engine
 - Loudness: loudness measurements of audio content ([ITU-R BS.1770-4](https://www.itu.int/rec/R-REC-BS.1770/recommendation.asp?lang=fr&parent=R-REC-BS.1770-4-201510-I){:target="_blank"})
 - ADM Engine: renderer for Object-Based Audio ([ITU-R BS.2076-1](https://www.itu.int/rec/R-REC-BS.2076-1-201706-I/fr){:target="_blank"})
 
+### Available workers under license
+
+#### Co-property of Telecom SudParis & France Televisions:
+- Automatic Content Synchronisation: Synchronise asynchronous transcripted subtitles with the related audio (actually in French)
+- Automatic Content Positionning: Place subtitles out of pre-existing texts/graphics zones on screen
+
 ### Deployment
 
 The entire project is currently deployed using [Kubernetes](https://kubernetes.io){:target="_blank"}.  
