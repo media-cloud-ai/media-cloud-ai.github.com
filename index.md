@@ -44,7 +44,7 @@ The core component is the backend, which provide user managment, workflow engine
 - Command line: to execute any command line available
 - FFmpeg: to manipulate any video and audio formats
 - Loudness: loudness measurements of audio content ([ITU-R BS.1770-4](https://www.itu.int/rec/R-REC-BS.1770/recommendation.asp?lang=fr&parent=R-REC-BS.1770-4-201510-I){:target="_blank"})
-- ADM Engine: renderer for Object-Based Audio (ITU-R BS.2076-1](https://www.itu.int/rec/R-REC-BS.2076-1-201706-I/fr){:target="_blank"})
+- ADM Engine: renderer for Object-Based Audio ([ITU-R BS.2076-1](https://www.itu.int/rec/R-REC-BS.2076-1-201706-I/fr){:target="_blank"})
 
 ### Deployment
 
