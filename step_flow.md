@@ -21,7 +21,7 @@ class step green
 class job blue
 </div>
 
-### Backend/RabbitMQ/Workers messaging
+### Send Job order to Worker(s)
 
 <div class="mermaid">
 graph LR
@@ -57,8 +57,9 @@ class exchange_1 blue
 class exchange_2 blue
 
 style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
-style rmq2 fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 </div>
+
+### Return Job status from Worker(s) to the Backend
 
 <div class="mermaid">
 graph LR
@@ -68,7 +69,7 @@ w2(fa:fa-cog Worker 2) --> exchange_2
 w3(fa:fa-cog Worker 3) --> exchange_2
 wn(fa:fa-cog Worker n) --> exchange_2
 
-subgraph rmq2[Rabbit MQ]
+subgraph rmq[Rabbit MQ]
   exchange_2 --> |completed| q_completed[fa:fa-list-ul Queue Completed]
   exchange_2 --> |error| q_error[fa:fa-list-ul  Queue Error]
 end
@@ -95,7 +96,6 @@ class exchange_1 blue
 class exchange_2 blue
 
 style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
-style rmq2 fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 </div>
 
 <style type="text/css">
