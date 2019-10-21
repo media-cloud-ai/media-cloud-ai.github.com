@@ -25,14 +25,14 @@ class job blue
 
 <div class="mermaid">
 graph LR
-backend(fa:fa-cogs Backend) --> |Send message| exchange_1(("fa:fa-exchange-alt Submit Job <br/>(topic)"))
+backend(fa:fa-cogs Backend) --> |Send message| exchange_1("fa:fa-exchange-alt Submit Job <br/>(topic)")
 
 subgraph rmq[Rabbit MQ]
   exchange_1--- job_type_1["Job Type 1"] --> q_worker_1[fa:fa-list-ul Queue Job Type 1]
   exchange_1 --- job_type_2["Job Type 2"] -->q_worker_2[fa:fa-list-ul Queue Job Type 2]
   exchange_1 --- job_type_3["Job Type 3"] --> q_worker_n[fa:fa-list-ul Queue Job Type N]
 
-  exchange_1 -->|unknown job type| exchange_unknwon(("fa:fa-exchange-alt Queue Not Found<br/>(direct)"))
+  exchange_1 -->|unknown job type| exchange_unknwon("fa:fa-exchange-alt Queue Not Found<br/>(direct)")
   exchange_unknwon -->|job type n| q_unknown[fa:fa-list-ul Queue Job Type Not Found]
 end
 
@@ -43,6 +43,7 @@ q_worker_n --- wn(fa:fa-cog Worker n)
 q_unknown --- backend_2(fa:fa-cogs Backend)
 
 classDef blue fill:#155799,stroke: none,color: #fff;
+classDef cyan fill:#168a9c,stroke: none,color: #fff;
 classDef green fill:#159957,stroke: none,color: #fff;
 
 class backend green
@@ -57,9 +58,9 @@ class q_worker_n blue
 class q_completed blue
 class q_error blue
 class q_unknown blue
-class exchange_1 blue
-class exchange_2 blue
-class exchange_unknwon blue
+class exchange_1 cyan
+class exchange_2 cyan
+class exchange_unknwon cyan
 
 classDef hidden fill:#fff0,stroke: none,color: #fff;width:0px
 class job_type_1 hidden
@@ -74,7 +75,7 @@ style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 <div class="mermaid">
 graph LR
 
-w1(fa:fa-cog Worker 1) --> exchange((fa:fa-exchange-alt Response Exchange))
+w1(fa:fa-cog Worker 1) --> exchange(fa:fa-exchange-alt Response Exchange)
 w2(fa:fa-cog Worker 2) --> exchange
 w3(fa:fa-cog Worker 3) --> exchange
 wn(fa:fa-cog Worker n) --> exchange
@@ -88,6 +89,7 @@ q_completed --> |Consume queue Job Completed|backend2(fa:fa-cogs Backend)
 q_error --> |Consume queue Job Error|backend2
 
 classDef blue fill:#155799,stroke: none,color: #fff;
+classDef cyan fill:#168a9c,stroke: none,color: #fff;
 classDef green fill:#159957,stroke: none,color: #fff;
 
 class backend green
@@ -102,8 +104,7 @@ class q_worker_2 blue
 class q_worker_n blue
 class q_completed blue
 class q_error blue
-class exchange blue
-class exchange blue
+class exchange cyan
 
 style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 </div>
