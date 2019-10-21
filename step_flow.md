@@ -72,3 +72,10 @@ class exchange_2 blue
 style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 style rmq2 fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 </div>
+
+
+<style type="text/css">
+	.edgeLabel {
+		background-color: #ffff !important;
+	}
+</style>
