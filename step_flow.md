@@ -38,10 +38,35 @@ q_worker_2 --- w2(fa:fa-cog Worker 2)
 q_worker_2 --- w3(fa:fa-cog Worker 3)
 q_worker_n --- wn(fa:fa-cog Worker n)
 
-w1 --> exchange_2[fa:fa-exchange-alt Exchange]
-w2 --> exchange_2
-w3 --> exchange_2
-wn --> exchange_2
+classDef blue fill:#155799,stroke: none,color: #fff;
+classDef green fill:#159957,stroke: none,color: #fff;
+
+class backend green
+class backend2 green
+class backend3 green
+class w1 green
+class w2 green
+class w3 green
+class wn green
+class q_worker_1 blue
+class q_worker_2 blue
+class q_worker_n blue
+class q_completed blue
+class q_error blue
+class exchange_1 blue
+class exchange_2 blue
+
+style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
+style rmq2 fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
+</div>
+
+<div class="mermaid">
+graph LR
+
+w1(fa:fa-cog Worker 1) --> exchange_2[fa:fa-exchange-alt Exchange]
+w2(fa:fa-cog Worker 2) --> exchange_2
+w3(fa:fa-cog Worker 3) --> exchange_2
+wn(fa:fa-cog Worker n) --> exchange_2
 
 subgraph rmq2[Rabbit MQ]
   exchange_2 --> |completed| q_completed[fa:fa-list-ul Queue Completed]
@@ -72,7 +97,6 @@ class exchange_2 blue
 style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 style rmq2 fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 </div>
-
 
 <style type="text/css">
 	.edgeLabel {
