@@ -21,6 +21,29 @@ class step green
 class job blue
 </div>
 
+### Register a Worker
+
+<div class="mermaid">
+graph LR
+
+w1(fa:fa-cog Worker 1) --- q_worker_1
+
+subgraph rmq[Rabbit MQ]
+ q_worker_1[fa:fa-list-ul Worker Discovery]
+end
+
+q_worker_1 --> backend(fa:fa-cogs Backend) 
+
+classDef blue fill:#155799,stroke: none,color: #fff;
+classDef green fill:#159957,stroke: none,color: #fff;
+
+class backend green
+class w1 green
+class q_worker_1 blue
+
+style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
+</div>
+
 ### Send Job order to Worker(s)
 
 <div class="mermaid">
@@ -75,7 +98,7 @@ style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 <div class="mermaid">
 graph LR
 
-w1(fa:fa-cog Worker 1) --> exchange(fa:fa-exchange Response Exchange)
+w1(fa:fa-cog Worker 1) --> exchange(fa:fa-exchange Response Exchange<br/>(topic))
 w2(fa:fa-cog Worker 2) --> exchange
 w3(fa:fa-cog Worker 3) --> exchange
 wn(fa:fa-cog Worker n) --> exchange
