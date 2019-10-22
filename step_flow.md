@@ -98,7 +98,7 @@ style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 <div class="mermaid">
 graph LR
 
-w1(fa:fa-cog Worker 1) --> exchange(fa:fa-exchange Response Exchange<br/>(topic))
+w1(fa:fa-cog Worker 1) --> exchange("fa:fa-exchange Response Exchange<br/>(topic)")
 w2(fa:fa-cog Worker 2) --> exchange
 w3(fa:fa-cog Worker 3) --> exchange
 wn(fa:fa-cog Worker n) --> exchange
@@ -136,4 +136,8 @@ style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
 	.edgeLabel {
 		background-color: #ffff !important;
 	}
+  .mermaid {
+    text-align: center;
+    margin: auto;
+  }
 </style>
