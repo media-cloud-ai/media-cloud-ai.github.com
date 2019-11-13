@@ -64,7 +64,7 @@ The frontend is designed using [Angular.io](https://angular.io){:target="_blank"
   <img height="100px" src="/assets/images/angular-icon.svg">
 </p>
 
-The backend use the power of [Elixir](https://elixir-lang.org/){:target="_blank"}, based on [ERLang](https://www.erlang.org/){:target="_blank"} to provide a resilient and efficient backend.
+The backend use the power of [Elixir](https://elixir-lang.org/){:target="_blank"}, based on [Erlang](https://www.erlang.org/){:target="_blank"} to provide a resilient and efficient backend.
 <p align="center">
   <img height="100px" src="/assets/images/elixir.png">
 </p>
