@@ -1,0 +1,190 @@
+{
+    "$id": "http://media-io.com/workflow-definition.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {},
+    "properties": {
+        "identifier": {
+            "$id": "#/properties/identifier",
+            "default": "",
+            "examples": [
+                "Speech To Text"
+            ],
+            "pattern": "^(.*)$",
+            "title": "The Identifier Schema",
+            "type": "string"
+        },
+        "parameters": {
+            "$id": "#/properties/parameters",
+            "title": "The Parameters Schema",
+            "type": "array"
+        },
+        "steps": {
+            "$id": "#/properties/steps",
+            "items": {
+                "$id": "#/properties/steps/items",
+                "properties": {
+                    "enable": {
+                        "$id": "#/properties/steps/items/properties/enable",
+                        "default": false,
+                        "examples": [
+                            true
+                        ],
+                        "title": "The Enable Schema",
+                        "type": "boolean"
+                    },
+                    "icon": {
+                        "$id": "#/properties/steps/items/properties/icon",
+                        "default": "",
+                        "examples": [
+                            "file_download"
+                        ],
+                        "pattern": "^(.*)$",
+                        "title": "The Icon Schema",
+                        "type": "string"
+                    },
+                    "id": {
+                        "$id": "#/properties/steps/items/properties/id",
+                        "default": 0,
+                        "examples": [
+                            0
+                        ],
+                        "title": "The Id Schema",
+                        "type": "integer"
+                    },
+                    "label": {
+                        "$id": "#/properties/steps/items/properties/label",
+                        "default": "",
+                        "examples": [
+                            "Download source elements"
+                        ],
+                        "pattern": "^(.*)$",
+                        "title": "The Label Schema",
+                        "type": "string"
+                    },
+                    "name": {
+                        "$id": "#/properties/steps/items/properties/name",
+                        "default": "",
+                        "examples": [
+                            "job_transfer"
+                        ],
+                        "pattern": "^(.*)$",
+                        "title": "The Name Schema",
+                        "type": "string"
+                    },
+                    "parameters": {
+                        "$id": "#/properties/steps/items/properties/parameters",
+                        "items": {
+                            "$id": "#/properties/steps/items/properties/parameters/items",
+                            "properties": {
+                                "id": {
+                                    "$id": "#/properties/steps/items/properties/parameters/items/properties/id",
+                                    "default": "",
+                                    "examples": [
+                                        "source_paths"
+                                    ],
+                                    "pattern": "^(.*)$",
+                                    "title": "The Id Schema",
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "$id": "#/properties/steps/items/properties/parameters/items/properties/type",
+                                    "default": "",
+                                    "examples": [
+                                        "template"
+                                    ],
+                                    "pattern": "^(.*)$",
+                                    "title": "The Type Schema",
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "$id": "#/properties/steps/items/properties/parameters/items/properties/value",
+                                    "default": "",
+                                    "examples": [
+                                        "{audio_source_filename}"
+                                    ],
+                                    "pattern": "^(.*)$",
+                                    "title": "The Value Schema",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "type",
+                                "value"
+                            ],
+                            "title": "The Items Schema",
+                            "type": "object"
+                        },
+                        "title": "The Parameters Schema",
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "label",
+                    "icon",
+                    "enable",
+                    "parameters"
+                ],
+                "title": "The Items Schema",
+                "type": "object"
+            },
+            "title": "The Steps Schema",
+            "type": "array"
+        },
+        "tags": {
+            "$id": "#/properties/tags",
+            "items": {
+                "$id": "#/properties/tags/items",
+                "default": "",
+                "examples": [
+                    "speech_to_text"
+                ],
+                "pattern": "^(.*)$",
+                "title": "The Items Schema",
+                "type": "string"
+            },
+            "title": "The Tags Schema",
+            "type": "array"
+        },
+        "version_major": {
+            "$id": "#/properties/version_major",
+            "default": 0,
+            "examples": [
+                0
+            ],
+            "title": "The Version_major Schema",
+            "type": "integer"
+        },
+        "version_micro": {
+            "$id": "#/properties/version_micro",
+            "default": 0,
+            "examples": [
+                1
+            ],
+            "title": "The Version_micro Schema",
+            "type": "integer"
+        },
+        "version_minor": {
+            "$id": "#/properties/version_minor",
+            "default": 0,
+            "examples": [
+                0
+            ],
+            "title": "The Version_minor Schema",
+            "type": "integer"
+        }
+    },
+    "required": [
+        "identifier",
+        "version_major",
+        "version_minor",
+        "version_micro",
+        "tags",
+        "parameters",
+        "steps"
+    ],
+    "title": "Schema of Workflow Definition for Media Cloud AI",
+    "type": "object"
+}
