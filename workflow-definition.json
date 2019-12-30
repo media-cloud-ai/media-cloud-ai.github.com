@@ -104,7 +104,11 @@
                                     ],
                                     "pattern": "^(.*)$",
                                     "title": "The Value Schema",
-                                    "type": "string"
+                                    "type": [
+                                        "number",
+                                        "string",
+                                        "array"
+                                    ]
                                 }
                             },
                             "required": [
