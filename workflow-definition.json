@@ -1,6 +1,6 @@
 {
     "$id": "http://media-io.com/workflow-definition.json",
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
     "definitions": {},
     "properties": {
         "identifier": {
