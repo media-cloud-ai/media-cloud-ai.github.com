@@ -1,30 +1,178 @@
 {
     "$id": "https://media-cloud.ai/standard/1.0/workflow-definition.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "definitions": {},
+    "definitions": {
+        "start_parameter": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "default": "",
+                    "pattern": "^(.*)$",
+                    "title": "Identifier of the parameter",
+                    "type": "string"
+                },
+                "label": {
+                    "default": "",
+                    "pattern": "^(.*)$",
+                    "title": "Label of the parameter",
+                    "type": "string"
+                },
+                "type": {
+                    "default": "",
+                    "pattern": "^(.*)$",
+                    "title": "Type of the data value for this parameter",
+                    "type": "string",
+                    "enum": [
+                        "file",
+                        "choice",
+                        "number"
+                    ]
+                },
+                "default": {
+                    "default": "",
+                    "pattern": "^(.*)$",
+                    "title": "Default value of the parameter",
+                    "type": [
+                        "integer",
+                        "number",
+                        "string",
+                        "array"
+                    ]
+                },
+                "value": {
+                    "default": "",
+                    "pattern": "^(.*)$",
+                    "title": "Value of the parameter",
+                    "type": [
+                        "integer",
+                        "number",
+                        "string",
+                        "array"
+                    ]
+                },
+                "required": {
+                    "default": false,
+                    "title": "Set the parameter required",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "id",
+                "label",
+                "type"
+            ]
+        },
+        "parameter": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "default": "",
+                    "pattern": "^(.*)$",
+                    "title": "Identifier of the parameter",
+                    "type": "string"
+                },
+                "type": {
+                    "default": "",
+                    "pattern": "^(.*)$",
+                    "title": "Type of the data value for this parameter",
+                    "type": "string",
+                    "enum": [
+                        "array_of_strings",
+                        "array_of_templates",
+                        "boolean",
+                        "credential",
+                        "filter",
+                        "integer",
+                        "requirements",
+                        "string",
+                        "template"
+                    ]
+                },
+                "default": {
+                    "default": "",
+                    "pattern": "^(.*)$",
+                    "title": "Default value of the parameter",
+                    "type": [
+                        "boolean",
+                        "number",
+                        "integer",
+                        "string",
+                        "array"
+                    ]
+                },
+                "value": {
+                    "default": "",
+                    "pattern": "^(.*)$",
+                    "title": "Value of the parameter",
+                    "type": [
+                        "boolean",
+                        "number",
+                        "integer",
+                        "string",
+                        "array"
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "type",
+                "value"
+            ]
+        },
+        "start_parameters": {
+            "items": { "$ref": "#/definitions/start_parameter" },
+            "title": "Array of Start Parameter",
+            "type": "array"
+        },
+        "parameters": {
+            "items": { "$ref": "#/definitions/parameter" },
+            "title": "Array of Parameter",
+            "type": "array"
+        }
+    },
     "properties": {
         "identifier": {
             "$id": "#/properties/identifier",
             "default": "",
             "examples": [
-                "Speech To Text"
+                "speech_to_text"
             ],
-            "pattern": "^(.*)$",
-            "title": "The Identifier Schema",
+            "pattern": "^([a-z_]+)$",
+            "title": "The Identifier of the workflow, used to reference it",
             "type": "string"
         },
+        "label": {
+            "$id": "#/properties/label",
+            "default": "",
+            "examples": [
+                "speech_to_text"
+            ],
+            "pattern": "^(.*)$",
+            "title": "The label of the workflow, used as displayed name",
+            "type": "string"
+        },
+        "icon": {
+            "$id": "#/properties/icon",
+            "default": "",
+            "examples": [
+                "subtitles"
+            ],
+            "pattern": "^([a-z_]+)$",
+            "title": "The icon used with the label. One of https://material.io/resources/icons/",
+            "type": "string"
+        },
+        "start_parameters": {
+            "title": "Definition of available parameters to start the workflow definition",
+            "$ref": "#/definitions/start_parameters"
+        },
         "parameters": {
-            "$id": "#/properties/parameters",
-            "title": "The Parameters Schema",
-            "type": "array"
+            "title": "Storage of dynamic parameters during process of the workflow instance",
+            "$ref": "#/definitions/parameters"
         },
         "steps": {
-            "$id": "#/properties/steps",
             "items": {
-                "$id": "#/properties/steps/items",
                 "properties": {
                     "enable": {
-                        "$id": "#/properties/steps/items/properties/enable",
                         "default": false,
                         "examples": [
                             true
@@ -33,7 +181,6 @@
                         "type": "boolean"
                     },
                     "icon": {
-                        "$id": "#/properties/steps/items/properties/icon",
                         "default": "",
                         "examples": [
                             "file_download"
@@ -43,7 +190,6 @@
                         "type": "string"
                     },
                     "id": {
-                        "$id": "#/properties/steps/items/properties/id",
                         "default": 0,
                         "examples": [
                             0
@@ -52,7 +198,6 @@
                         "type": "integer"
                     },
                     "label": {
-                        "$id": "#/properties/steps/items/properties/label",
                         "default": "",
                         "examples": [
                             "Download source elements"
@@ -62,65 +207,26 @@
                         "type": "string"
                     },
                     "name": {
-                        "$id": "#/properties/steps/items/properties/name",
                         "default": "",
                         "examples": [
                             "job_transfer"
                         ],
-                        "pattern": "^(.*)$",
-                        "title": "The Name Schema",
+                        "pattern": "^([a-z_]+)$",
+                        "title": "Name of the parameter",
                         "type": "string"
                     },
                     "parameters": {
-                        "$id": "#/properties/steps/items/properties/parameters",
-                        "items": {
-                            "$id": "#/properties/steps/items/properties/parameters/items",
-                            "properties": {
-                                "id": {
-                                    "$id": "#/properties/steps/items/properties/parameters/items/properties/id",
-                                    "default": "",
-                                    "examples": [
-                                        "source_paths"
-                                    ],
-                                    "pattern": "^(.*)$",
-                                    "title": "The Id Schema",
-                                    "type": "string"
-                                },
-                                "type": {
-                                    "$id": "#/properties/steps/items/properties/parameters/items/properties/type",
-                                    "default": "",
-                                    "examples": [
-                                        "template"
-                                    ],
-                                    "pattern": "^(.*)$",
-                                    "title": "The Type Schema",
-                                    "type": "string"
-                                },
-                                "value": {
-                                    "$id": "#/properties/steps/items/properties/parameters/items/properties/value",
-                                    "default": "",
-                                    "examples": [
-                                        "{audio_source_filename}"
-                                    ],
-                                    "pattern": "^(.*)$",
-                                    "title": "The Value Schema",
-                                    "type": [
-                                        "number",
-                                        "string",
-                                        "array"
-                                    ]
-                                }
-                            },
-                            "required": [
-                                "id",
-                                "type",
-                                "value"
-                            ],
-                            "title": "The Items Schema",
-                            "type": "object"
-                        },
-                        "title": "The Parameters Schema",
-                        "type": "array"
+                        "$ref": "#/definitions/parameters"
+                    },
+                    "parent_ids": {
+                        "title": "Reference(s) of parent steps",
+                        "type": "array",
+                        "items": { "type": "integer" }
+                    },
+                    "required": {
+                        "title": "Reference(s) of required steps to start that step",
+                        "type": "array",
+                        "items": { "type": "integer" }
                     }
                 },
                 "required": [
@@ -128,7 +234,6 @@
                     "name",
                     "label",
                     "icon",
-                    "enable",
                     "parameters"
                 ],
                 "title": "The Items Schema",
@@ -138,9 +243,7 @@
             "type": "array"
         },
         "tags": {
-            "$id": "#/properties/tags",
             "items": {
-                "$id": "#/properties/tags/items",
                 "default": "",
                 "examples": [
                     "speech_to_text"
@@ -153,35 +256,22 @@
             "type": "array"
         },
         "version_major": {
-            "$id": "#/properties/version_major",
-            "default": 0,
-            "examples": [
-                0
-            ],
-            "title": "The Version_major Schema",
-            "type": "integer"
-        },
-        "version_micro": {
-            "$id": "#/properties/version_micro",
-            "default": 0,
-            "examples": [
-                1
-            ],
-            "title": "The Version_micro Schema",
+            "title": "Major version of this Workflow definition",
             "type": "integer"
         },
         "version_minor": {
-            "$id": "#/properties/version_minor",
-            "default": 0,
-            "examples": [
-                0
-            ],
-            "title": "The Version_minor Schema",
+            "title": "Minor version of this Workflow definition",
+            "type": "integer"
+        },
+        "version_micro": {
+            "title": "Micro version of this Workflow definition",
             "type": "integer"
         }
     },
     "required": [
         "identifier",
+        "label",
+        "icon",
         "version_major",
         "version_minor",
         "version_micro",
