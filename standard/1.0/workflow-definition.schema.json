@@ -84,6 +84,7 @@
                         "filter",
                         "integer",
                         "requirements",
+                        "select_input",
                         "string",
                         "template"
                     ]
