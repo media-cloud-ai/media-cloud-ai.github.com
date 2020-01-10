@@ -98,7 +98,8 @@
                         "number",
                         "integer",
                         "string",
-                        "array"
+                        "array",
+                        "object"
                     ]
                 },
                 "value": {
@@ -110,7 +111,8 @@
                         "number",
                         "integer",
                         "string",
-                        "array"
+                        "array",
+                        "object"
                     ]
                 }
             },
