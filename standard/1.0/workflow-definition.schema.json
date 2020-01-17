@@ -122,15 +122,88 @@
                 "value"
             ]
         },
-        "start_parameters": {
-            "items": { "$ref": "#/definitions/start_parameter" },
-            "title": "Array of Start Parameter",
-            "type": "array"
+        "step": {
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "default": false,
+                    "examples": [
+                        true
+                    ],
+                    "title": "The Enable Schema",
+                    "type": "boolean"
+                },
+                "icon": {
+                    "default": "",
+                    "examples": [
+                        "file_download"
+                    ],
+                    "pattern": "^(.*)$",
+                    "title": "The Icon Schema",
+                    "type": "string"
+                },
+                "id": {
+                    "default": 0,
+                    "examples": [
+                        0
+                    ],
+                    "title": "The Id Schema",
+                    "type": "integer"
+                },
+                "label": {
+                    "default": "",
+                    "examples": [
+                        "Download source elements"
+                    ],
+                    "pattern": "^(.*)$",
+                    "title": "The Label Schema",
+                    "type": "string"
+                },
+                "name": {
+                    "default": "",
+                    "examples": [
+                        "job_transfer"
+                    ],
+                    "pattern": "^([a-z_]+)$",
+                    "title": "Name of the parameter",
+                    "type": "string"
+                },
+                "parameters": {
+                    "$ref": "#/definitions/parameters"
+                },
+                "parent_ids": {
+                    "title": "Reference(s) of parent steps",
+                    "type": "array",
+                    "items": { "type": "integer" }
+                },
+                "required": {
+                    "title": "Reference(s) of required steps to start that step",
+                    "type": "array",
+                    "items": { "type": "integer" }
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "label",
+                "icon",
+                "parameters"
+            ],
+            "title": "The Items Schema"
         },
-        "parameters": {
-            "items": { "$ref": "#/definitions/parameter" },
-            "title": "Array of Parameter",
-            "type": "array"
+        "tag": {
+            "type": "string",
+            "default": "",
+            "examples": [
+                "speech_to_text"
+            ],
+            "pattern": "^(.*)$",
+            "title": "The Items Schema"
+        },
+        "parameters":{
+            "type":	"array",
+            "items":{ "$ref": "#/definitions/parameter" },
+            "title":	"Array of Parameter"
         }
     },
     "properties": {
@@ -165,96 +238,22 @@
             "type": "string"
         },
         "start_parameters": {
+            "items": { "$ref": "#/definitions/start_parameter" },
             "title": "Definition of available parameters to start the workflow definition",
-            "$ref": "#/definitions/start_parameters"
+            "type": "array"
         },
         "parameters": {
+            "items": { "$ref": "#/definitions/parameter" },
             "title": "Storage of dynamic parameters during process of the workflow instance",
-            "$ref": "#/definitions/parameters"
+            "type": "array"
         },
         "steps": {
-            "items": {
-                "properties": {
-                    "enable": {
-                        "default": false,
-                        "examples": [
-                            true
-                        ],
-                        "title": "The Enable Schema",
-                        "type": "boolean"
-                    },
-                    "icon": {
-                        "default": "",
-                        "examples": [
-                            "file_download"
-                        ],
-                        "pattern": "^(.*)$",
-                        "title": "The Icon Schema",
-                        "type": "string"
-                    },
-                    "id": {
-                        "default": 0,
-                        "examples": [
-                            0
-                        ],
-                        "title": "The Id Schema",
-                        "type": "integer"
-                    },
-                    "label": {
-                        "default": "",
-                        "examples": [
-                            "Download source elements"
-                        ],
-                        "pattern": "^(.*)$",
-                        "title": "The Label Schema",
-                        "type": "string"
-                    },
-                    "name": {
-                        "default": "",
-                        "examples": [
-                            "job_transfer"
-                        ],
-                        "pattern": "^([a-z_]+)$",
-                        "title": "Name of the parameter",
-                        "type": "string"
-                    },
-                    "parameters": {
-                        "$ref": "#/definitions/parameters"
-                    },
-                    "parent_ids": {
-                        "title": "Reference(s) of parent steps",
-                        "type": "array",
-                        "items": { "type": "integer" }
-                    },
-                    "required": {
-                        "title": "Reference(s) of required steps to start that step",
-                        "type": "array",
-                        "items": { "type": "integer" }
-                    }
-                },
-                "required": [
-                    "id",
-                    "name",
-                    "label",
-                    "icon",
-                    "parameters"
-                ],
-                "title": "The Items Schema",
-                "type": "object"
-            },
+            "items": { "$ref": "#/definitions/step" },
             "title": "The Steps Schema",
             "type": "array"
         },
         "tags": {
-            "items": {
-                "default": "",
-                "examples": [
-                    "speech_to_text"
-                ],
-                "pattern": "^(.*)$",
-                "title": "The Items Schema",
-                "type": "string"
-            },
+            "items": {"$ref": "#/definitions/tag" },
             "title": "The Tags Schema",
             "type": "array"
         },

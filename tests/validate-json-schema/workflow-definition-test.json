@@ -1,0 +1,56 @@
+{
+    "icon": "tete_a_toto",
+    "identifier": "monsieur_toto",
+    "label": "",
+    "parameters": [],
+    "start_parameters": [
+        {
+            "accept": ".veg",
+            "id": "vegetable_name",
+            "label": "Vegetable",
+            "type": "file"
+        }
+    ],
+    "steps": [
+        {
+            "enable": true,
+            "icon": "clean_vegies",
+            "id": 0,
+            "label": "Clean vegetables",
+            "name": "clean",
+            "parameters": [
+                {
+                    "id": "name",
+                    "type": "string",
+                    "value": "{vegetable_name}"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "icon": "cook_vegies",
+            "id": 0,
+            "label": "Cook vegetables",
+            "name": "cook",
+            "parameters": [
+                {
+                    "id": "name",
+                    "type": "string",
+                    "value": "{vegetable_name}"
+                }
+            ],
+            "parent_ids": [
+                0
+            ],
+            "required": [
+                0
+            ]
+        }
+    ],
+    "tags": [
+        "toto"
+    ],
+    "version_major": 0,
+    "version_micro": 1,
+    "version_minor": 0
+}
