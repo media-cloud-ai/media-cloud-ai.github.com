@@ -4,26 +4,7 @@ layout: default
 # Schema
 ## Metadata
 
- <table style="width:100%">
-  <tr>
-    <th>Keyword</th>
-    <th>Value</th>
-  </tr>
-  <tr>
-    <td>ID</td>
-    <td>
-        <a href= "{{ site.data.workflow-definition-schema['$id'] }}">
-            {{ site.data.workflow-definition-schema['$id'] }}</a>
-    </td>
-  </tr>
-  <tr>
-    <td>Json draft</td>
-    <td>
-        <a href="{{ site.data.workflow-definition-schema['$schema'] }}">
-            {{ site.data.workflow-definition-schema['$schema'] }}</a>
-    </td>
-  </tr>
-</table> 
+{% include metadata_table.html %}
 
 {% assign parts = "definitions,properties" | split: ','%}
 
