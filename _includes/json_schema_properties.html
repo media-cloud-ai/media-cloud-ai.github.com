@@ -8,13 +8,13 @@
   <span>
     {{ object.last.title }}
   </span>
-  {% if object.last.default != undefined %}
+  {% if object.last.default %}
   <div class="parameter">
     <label>Default</label>
     <span>{{object.last.default}}</span>
   </div>
   {% endif %}
-  {% if object.last.pattern != undefined and object.last.pattern != "" %}
+  {% if object.last.pattern and object.last.pattern != "" %}
   <div class="parameter">
     <label>Pattern</label>
     <span>
@@ -24,7 +24,7 @@
     </span>
   </div>
   {% endif %}
-  {% if object.last.enum != undefined %}
+  {% if object.last.enum %}
   <div class="parameter">
     <label>Enumeration</label>
   </div>
@@ -38,7 +38,7 @@
   </div>
   {% endfor %}
   {% endif %}
-  {% if object.last.examples != undefined %}
+  {% if object.last.examples %}
   <div class="parameter">
     <label>Examples</label>
   </div>
