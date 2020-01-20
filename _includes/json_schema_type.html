@@ -1,19 +1,12 @@
 
 {% if include.object.items['$ref'] %}
-
-{%- capture type -%}
 <a href="{{include.object.items['$ref'] | replace_first: '/definitions/', ''}}">
 array&lt;{{include.object.items['$ref'] }}&gt;
 </a>
-{% endcapture %}
-{{-type-}}
 
 {% elsif include.object.items.type %}
 
-{%- capture type -%}
 array&lt;{{include.object.items.type }}&gt;
-{% endcapture %}
-{{-type-}}
 
 {% elsif include.object.type[0] %}
 
