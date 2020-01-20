@@ -157,7 +157,8 @@
                     "type": "string"
                 },
                 "parameters": {
-                    "$ref": "#/definitions/parameters"
+                    "type": "array",
+                    "items":{ "$ref": "#/definitions/parameter" },
                 },
                 "parent_ids": {
                     "title": "Reference(s) of parent steps",
@@ -186,11 +187,6 @@
             ],
             "pattern": "^(.*)$",
             "title": "The Items Schema"
-        },
-        "parameters":{
-            "type":	"array",
-            "items":{ "$ref": "#/definitions/parameter" },
-            "title": "Array of Parameter"
         }
     },
     "properties": {
