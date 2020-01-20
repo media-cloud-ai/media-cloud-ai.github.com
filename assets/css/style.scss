@@ -2,3 +2,65 @@
 ---
 
 @import 'jekyll-theme-cayman';
+
+.property {
+  margin-top: 10px;
+}
+
+.property .type {
+  font-size: 0.8em;
+  color: #567482;
+}
+
+.property .parameter label {
+  padding-left: 20px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.property .parameter label:after {
+  content: ":";
+}
+
+.property .parameter label:before {
+  content: "- ";
+}
+
+.property .parameter.list_of_items {
+  padding-left: 40px;
+}
+
+.properties label {
+	display: inline-block;
+	width: 200px;
+}
+
+/**
+ * Link placement and hover behavior.
+ */
+
+.anchorjs-link {
+  color: inherit !important;
+  text-decoration: none !important; /* do not underline */
+}
+
+@media (max-width: 768px) {
+  /* Do not display AnchorJS icon on less than 768px view point */
+  .anchorjs-link {
+    display: none;
+  }
+}
+
+*:hover > .anchorjs-link {
+  opacity: .75;
+  /* To fade links as they appear, change transition-property from 'color' to 'all' */
+  -webkit-transition: color .16s linear;
+  transition: color .16s linear;
+}
+
+*:hover > .anchorjs-link:hover,
+.anchorjs-link:focus {
+  text-decoration: none !important; /* do not underline */
+  opacity: 1;
+}
+

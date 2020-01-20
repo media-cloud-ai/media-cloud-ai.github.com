@@ -1,0 +1,34 @@
+
+# {{schema.title}}
+
+## Schema information
+
+{% include json_schema_information.html %}
+
+## Properties
+
+{% include json_schema_properties.html properties=schema.properties %}
+
+___
+
+{% for object in schema.definitions %}
+
+## {{object.first}}
+
+{% if object.last.title %}
+Title: {{object.last.title}}
+{% endif %}
+
+{% if object.last.type %}
+Type: {% include json_schema_type.html object=object.last %}
+{% endif %}
+
+{% if object.last.pattern %}
+Pattern: <code>{{object.last.pattern}}</code>
+{% endif %}
+
+{% include json_schema_properties.html properties=object.last.properties %}
+
+___
+
+{% endfor %}

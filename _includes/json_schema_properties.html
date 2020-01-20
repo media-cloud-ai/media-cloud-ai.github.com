@@ -1,0 +1,57 @@
+
+{% for object in include.properties %}
+<div class="property">
+  <code style="color: #9e5757;">{{object.first}}</code>
+  <span class="type">
+    ({% include json_schema_type.html object=object.last %})
+  </span>
+  <span>
+    {{ object.last.title }}
+  </span>
+  {% if object.last.default != undefined %}
+  <div class="parameter">
+    <label>Default</label>
+    <span>{{object.last.default}}</span>
+  </div>
+  {% endif %}
+  {% if object.last.pattern != undefined and object.last.pattern != "" %}
+  <div class="parameter">
+    <label>Pattern</label>
+    <span>
+      <code>
+        {{object.last.pattern}}
+      </code>
+    </span>
+  </div>
+  {% endif %}
+  {% if object.last.enum != undefined %}
+  <div class="parameter">
+    <label>Enumeration</label>
+  </div>
+  {% for enumeration in object.last.enum %}
+  <div class="parameter list_of_items">
+    <span>
+      <code>
+        {{enumeration}}
+      </code>
+    </span>
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% if object.last.examples != undefined %}
+  <div class="parameter">
+    <label>Examples</label>
+  </div>
+
+  {% for example in object.last.examples %}
+  <div class="parameter list_of_items">
+    <span>
+      <code>
+        {{example}}
+      </code>
+    </span>
+  </div>
+  {% endfor %}
+  {% endif %}
+</div>
+{% endfor %}

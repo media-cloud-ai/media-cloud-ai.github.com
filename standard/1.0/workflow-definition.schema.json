@@ -6,19 +6,16 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Identifier of the parameter",
                     "type": "string"
                 },
                 "label": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Label of the parameter",
                     "type": "string"
                 },
                 "type": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Type of the data value for this parameter",
                     "type": "string",
@@ -29,7 +26,6 @@
                     ]
                 },
                 "default": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Default value of the parameter",
                     "type": [
@@ -40,7 +36,6 @@
                     ]
                 },
                 "value": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Value of the parameter",
                     "type": [
@@ -66,13 +61,11 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Identifier of the parameter",
                     "type": "string"
                 },
                 "type": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Type of the data value for this parameter",
                     "type": "string",
@@ -90,7 +83,6 @@
                     ]
                 },
                 "default": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Default value of the parameter",
                     "type": [
@@ -103,7 +95,6 @@
                     ]
                 },
                 "value": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Value of the parameter",
                     "type": [
@@ -134,7 +125,6 @@
                     "type": "boolean"
                 },
                 "icon": {
-                    "default": "",
                     "examples": [
                         "file_download"
                     ],
@@ -151,7 +141,6 @@
                     "type": "integer"
                 },
                 "label": {
-                    "default": "",
                     "examples": [
                         "Download source elements"
                     ],
@@ -160,7 +149,6 @@
                     "type": "string"
                 },
                 "name": {
-                    "default": "",
                     "examples": [
                         "job_transfer"
                     ],
@@ -177,7 +165,7 @@
                     "items": { "type": "integer" }
                 },
                 "required": {
-                    "title": "Reference(s) of required steps to start that step",
+                    "title": "Reference(s) of required steps to run that step",
                     "type": "array",
                     "items": { "type": "integer" }
                 }
@@ -193,7 +181,6 @@
         },
         "tag": {
             "type": "string",
-            "default": "",
             "examples": [
                 "speech_to_text"
             ],
@@ -203,13 +190,11 @@
         "parameters":{
             "type":	"array",
             "items":{ "$ref": "#/definitions/parameter" },
-            "title":	"Array of Parameter"
+            "title": "Array of Parameter"
         }
     },
     "properties": {
         "identifier": {
-            "$id": "#/properties/identifier",
-            "default": "",
             "examples": [
                 "speech_to_text"
             ],
@@ -219,7 +204,6 @@
         },
         "label": {
             "$id": "#/properties/label",
-            "default": "",
             "examples": [
                 "speech_to_text"
             ],
@@ -228,8 +212,6 @@
             "type": "string"
         },
         "icon": {
-            "$id": "#/properties/icon",
-            "default": "",
             "examples": [
                 "subtitles"
             ],
@@ -249,12 +231,12 @@
         },
         "steps": {
             "items": { "$ref": "#/definitions/step" },
-            "title": "The Steps Schema",
+            "title": "Steps to represent the complete process",
             "type": "array"
         },
         "tags": {
             "items": {"$ref": "#/definitions/tag" },
-            "title": "The Tags Schema",
+            "title": "List of tags to classify the worklow",
             "type": "array"
         },
         "version_major": {
