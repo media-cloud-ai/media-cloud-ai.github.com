@@ -1,0 +1,19 @@
+
+{% if include.object.items['$ref'] %}
+<a href="{{include.object.items['$ref'] | replace_first: '/definitions/', ''}}">
+array&lt;{{include.object.items['$ref'] }}&gt;
+</a>
+
+{% elsif include.object.items.type %}
+
+array&lt;{{include.object.items.type }}&gt;
+
+{% elsif include.object.type[0] %}
+
+{{- object.last.type | join: ", " -}}
+
+{% else %}
+
+{{-include.object.type-}}
+
+{% endif %}

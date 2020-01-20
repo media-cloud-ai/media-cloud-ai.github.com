@@ -1,24 +1,21 @@
 {
-    "$id": "https://media-cloud.ai/standard/1.0/workflow-definition.json",
+    "$id": "https://media-cloud.ai/standard/1.0/workflow-definition.schema.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "definitions": {
         "start_parameter": {
             "type": "object",
             "properties": {
                 "id": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Identifier of the parameter",
                     "type": "string"
                 },
                 "label": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Label of the parameter",
                     "type": "string"
                 },
                 "type": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Type of the data value for this parameter",
                     "type": "string",
@@ -29,7 +26,6 @@
                     ]
                 },
                 "default": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Default value of the parameter",
                     "type": [
@@ -40,7 +36,6 @@
                     ]
                 },
                 "value": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Value of the parameter",
                     "type": [
@@ -66,13 +61,11 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Identifier of the parameter",
                     "type": "string"
                 },
                 "type": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Type of the data value for this parameter",
                     "type": "string",
@@ -90,7 +83,6 @@
                     ]
                 },
                 "default": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Default value of the parameter",
                     "type": [
@@ -103,7 +95,6 @@
                     ]
                 },
                 "value": {
-                    "default": "",
                     "pattern": "^(.*)$",
                     "title": "Value of the parameter",
                     "type": [
@@ -122,21 +113,84 @@
                 "value"
             ]
         },
-        "start_parameters": {
-            "items": { "$ref": "#/definitions/start_parameter" },
-            "title": "Array of Start Parameter",
-            "type": "array"
+        "step": {
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "default": false,
+                    "examples": [
+                        true
+                    ],
+                    "title": "The Enable Schema",
+                    "type": "boolean"
+                },
+                "icon": {
+                    "examples": [
+                        "file_download"
+                    ],
+                    "pattern": "^(.*)$",
+                    "title": "The Icon Schema",
+                    "type": "string"
+                },
+                "id": {
+                    "default": 0,
+                    "examples": [
+                        0
+                    ],
+                    "title": "The Id Schema",
+                    "type": "integer"
+                },
+                "label": {
+                    "examples": [
+                        "Download source elements"
+                    ],
+                    "pattern": "^(.*)$",
+                    "title": "The Label Schema",
+                    "type": "string"
+                },
+                "name": {
+                    "examples": [
+                        "job_transfer"
+                    ],
+                    "pattern": "^([a-z_]+)$",
+                    "title": "Name of the parameter",
+                    "type": "string"
+                },
+                "parameters": {
+                    "type": "array",
+                    "items":{ "$ref": "#/definitions/parameter" },
+                },
+                "parent_ids": {
+                    "title": "Reference(s) of parent steps",
+                    "type": "array",
+                    "items": { "type": "integer" }
+                },
+                "required": {
+                    "title": "Reference(s) of required steps to run that step",
+                    "type": "array",
+                    "items": { "type": "integer" }
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "label",
+                "icon",
+                "parameters"
+            ],
+            "title": "The Items Schema"
         },
-        "parameters": {
-            "items": { "$ref": "#/definitions/parameter" },
-            "title": "Array of Parameter",
-            "type": "array"
+        "tag": {
+            "type": "string",
+            "examples": [
+                "speech_to_text"
+            ],
+            "pattern": "^(.*)$",
+            "title": "The Items Schema"
         }
     },
     "properties": {
         "identifier": {
-            "$id": "#/properties/identifier",
-            "default": "",
             "examples": [
                 "speech_to_text"
             ],
@@ -146,7 +200,6 @@
         },
         "label": {
             "$id": "#/properties/label",
-            "default": "",
             "examples": [
                 "speech_to_text"
             ],
@@ -155,8 +208,6 @@
             "type": "string"
         },
         "icon": {
-            "$id": "#/properties/icon",
-            "default": "",
             "examples": [
                 "subtitles"
             ],
@@ -165,97 +216,23 @@
             "type": "string"
         },
         "start_parameters": {
+            "items": { "$ref": "#/definitions/start_parameter" },
             "title": "Definition of available parameters to start the workflow definition",
-            "$ref": "#/definitions/start_parameters"
+            "type": "array"
         },
         "parameters": {
+            "items": { "$ref": "#/definitions/parameter" },
             "title": "Storage of dynamic parameters during process of the workflow instance",
-            "$ref": "#/definitions/parameters"
+            "type": "array"
         },
         "steps": {
-            "items": {
-                "properties": {
-                    "enable": {
-                        "default": false,
-                        "examples": [
-                            true
-                        ],
-                        "title": "The Enable Schema",
-                        "type": "boolean"
-                    },
-                    "icon": {
-                        "default": "",
-                        "examples": [
-                            "file_download"
-                        ],
-                        "pattern": "^(.*)$",
-                        "title": "The Icon Schema",
-                        "type": "string"
-                    },
-                    "id": {
-                        "default": 0,
-                        "examples": [
-                            0
-                        ],
-                        "title": "The Id Schema",
-                        "type": "integer"
-                    },
-                    "label": {
-                        "default": "",
-                        "examples": [
-                            "Download source elements"
-                        ],
-                        "pattern": "^(.*)$",
-                        "title": "The Label Schema",
-                        "type": "string"
-                    },
-                    "name": {
-                        "default": "",
-                        "examples": [
-                            "job_transfer"
-                        ],
-                        "pattern": "^([a-z_]+)$",
-                        "title": "Name of the parameter",
-                        "type": "string"
-                    },
-                    "parameters": {
-                        "$ref": "#/definitions/parameters"
-                    },
-                    "parent_ids": {
-                        "title": "Reference(s) of parent steps",
-                        "type": "array",
-                        "items": { "type": "integer" }
-                    },
-                    "required": {
-                        "title": "Reference(s) of required steps to start that step",
-                        "type": "array",
-                        "items": { "type": "integer" }
-                    }
-                },
-                "required": [
-                    "id",
-                    "name",
-                    "label",
-                    "icon",
-                    "parameters"
-                ],
-                "title": "The Items Schema",
-                "type": "object"
-            },
-            "title": "The Steps Schema",
+            "items": { "$ref": "#/definitions/step" },
+            "title": "Steps to represent the complete process",
             "type": "array"
         },
         "tags": {
-            "items": {
-                "default": "",
-                "examples": [
-                    "speech_to_text"
-                ],
-                "pattern": "^(.*)$",
-                "title": "The Items Schema",
-                "type": "string"
-            },
-            "title": "The Tags Schema",
+            "items": {"$ref": "#/definitions/tag" },
+            "title": "List of tags to classify the worklow",
             "type": "array"
         },
         "version_major": {
