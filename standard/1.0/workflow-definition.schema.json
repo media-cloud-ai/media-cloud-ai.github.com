@@ -158,9 +158,10 @@
                 },
                 "parameters": {
                     "type": "array",
-                    "items":{ "$ref": "#/definitions/parameter" },
+                    "items":{ "$ref": "#/definitions/parameter" }
                 },
-                "parent_ids": {
+                "parent_ids": 
+                {
                     "title": "Reference(s) of parent steps",
                     "type": "array",
                     "items": { "type": "integer" }
