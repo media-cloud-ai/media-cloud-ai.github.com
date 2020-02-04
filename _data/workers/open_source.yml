@@ -1,0 +1,55 @@
+- name: Command line worker
+  description: to execute any command available
+  github: media-cloud-ai/rs_command_line_worker
+  docker: mediacloudai/rs_command_line_worker
+
+- name: Transfer worker
+  description: move files across S3, FTP, HTTP, local storage
+  github: media-cloud-ai/rs_transfer_worker
+  docker: mediacloudai/rs_transfer_worker
+
+- name: HTTP worker
+  description: download content from HTTP
+  github: media-cloud-ai/rs_http_worker
+  docker: mediacloudai/rs_http_worker
+
+- name: File System worker
+  description: list, remove, copy files
+  github: media-cloud-ai/rs_file_system_worker
+  docker: mediacloudai/rs_file_system_worker
+
+- name: FFMpeg worker
+  description: to manipulate any video and audio formats
+  github: media-cloud-ai/rs_ffmpeg_worker
+  docker: mediacloudai/rs_ffmpeg_worker
+
+- name: Loudness worker
+  description: loudness measurements of audio content ([ITU-R BS.1770-4](https://www.itu.int/rec/R-REC-BS.1770/recommendation.asp?lang=fr&parent=R-REC-BS.1770-4-201510-I))
+  github: media-cloud-ai/adm_engine
+  docker: mediacloudai/adm-engine
+
+- name: ADM Engine worker
+  description: renderer for Object-Based Audio ([ITU-R BS.2076-1](https://www.itu.int/rec/R-REC-BS.2076-1-201706-I/fr))
+  github: media-cloud-ai/adm_engine
+  docker: mediacloudai/adm-engine
+
+- name: Manifest worker
+  description: DASH and ISM manifest manipulations
+  github: media-cloud-ai/rs_manifest_worker
+  docker: media-cloud-ai/rs_manifest_worker
+
+- name: AWS Cli worker
+  description: execute AWS action with aws2
+  github: media-cloud-ai/rs_manifest_worker
+  docker: mediacloudai/aws_cli_worker
+
+- name: C/C++ Binding worker
+  description: worker to run any C+/C++ worker
+  github: media-cloud-ai/c_amqp_worker
+  docker: media-cloud-ai/c_amqp_worker
+  coveralls: true
+
+- name: Python Binding worker
+  description: worker to run any Python worker
+  github: media-cloud-ai/c_amqp_worker
+  docker: mediacloudai/py_amqp_worker

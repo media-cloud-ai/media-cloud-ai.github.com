@@ -1,0 +1,24 @@
+{% for worker in workers %}
+  <div class="worker">
+    <label>
+      {{worker.name}}
+    </label>
+    {% if worker.description %}
+      <div class="description">
+        {{worker.description | markdownify}}
+      </div>
+    {% endif %}
+    <div class="icons">
+      {% if worker.github %}
+        <a href="https://github.com/{{worker.github}}">
+          <img src="/assets/images/github.svg" width="15px" target="_blank"/>
+        </a>
+      {% endif %}
+      {% if worker.docker %}
+        <a href="https://hub.docker.com/repository/docker/{{worker.docker}}">
+          <img src="/assets/images/docker.svg" width="15px" target="_blank"/>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}

@@ -1,0 +1,30 @@
+<div class="mermaid">
+graph LR
+
+w1(fa:fa-cog Worker 1) --- q_worker_1
+
+subgraph rmq[Rabbit MQ]
+ q_worker_1[fa:fa-list-ul Worker Discovery]
+end
+
+q_worker_1 --> backend(fa:fa-cogs Backend) 
+
+classDef blue fill:#155799,stroke: none,color: #fff;
+classDef green fill:#159957,stroke: none,color: #fff;
+
+class backend green
+class w1 green
+class q_worker_1 blue
+
+style rmq fill:#15579930,stroke:#155799,stroke-width:2px,color:#155799
+</div>
+
+<style type="text/css">
+  .edgeLabel {
+    background-color: #ffff !important;
+  }
+  .mermaid {
+    text-align: center;
+    margin: auto;
+  }
+</style>

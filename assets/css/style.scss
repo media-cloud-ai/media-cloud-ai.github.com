@@ -3,6 +3,69 @@
 
 @import 'jekyll-theme-cayman';
 
+.page-header {
+  padding-bottom: 0;
+}
+
+.project-name {
+  color: white;
+}
+
+.project-name:hover {
+  color: #eee;
+}
+
+nav.menu {
+  padding-top: 3em;
+}
+
+@media screen and (max-width: 42em) {
+  nav.menu {
+    padding-top: 0.5em;
+  }
+}
+
+@media screen and (max-width: 64em) and (min-width: 42em) {
+  nav.menu {
+    padding-top: 1em;
+  } 
+}
+
+nav.menu .item {
+  margin: 0px 5px;
+  display: inline-block;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+nav.menu a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+nav.menu a .item.selected {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+nav.menu a .item:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.language {
+  text-align: center;
+}
+
+.language img {
+  width: 100px;
+}
+
 .property {
   margin-top: 10px;
 }
@@ -64,3 +127,32 @@
   opacity: 1;
 }
 
+.worker {
+  display: inline-flex;
+  flex-direction: column;
+  width: 250px;
+  min-height: 180px;
+  vertical-align: top;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.worker label {
+  color: #159957;
+}
+
+.worker .description {
+  flex: 1;
+  font-size: 0.8em;
+  color: #888;
+}
+
+.worker .icons {
+  text-align: right;
+}

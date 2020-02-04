@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
     <link rel="icon" type="image/png" href="/assets/images/{{ site.favicon }}">
     {% if site.google_analytics %}
@@ -20,25 +20,34 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="/assets/js/mermaid.min.js"></script>
+    <script src="/assets/js/coverage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
   </head>
   <body>
     <header class="page-header" role="banner">
-      <img src="/assets/images/{{ page.logo | default: site.logo }}" height="80px"/>
-      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
+      <a href="/">
+        <img src="/assets/images/{{ page.logo | default: site.logo }}" height="80px"/>
+        <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+      </a>
+      <div class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</div>
+
+      <nav class="menu">
+        {% for menu in site.data.menu %}
+
+          <a href={{menu.link}}>
+            <span 
+              {% if page.url == menu.link %} class="item selected" {% else %} class="item" {% endif %}>
+              {{menu.name}}
+            </span>
+          </a>
+        {% endfor %}
+      </nav>
     </header>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
 
       <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
         <span class="site-footer-credits">This project is developped &amp; supported by:</span>
         <div style="text-align: center;">
           <a href="https://media-io.com" target="_blank">

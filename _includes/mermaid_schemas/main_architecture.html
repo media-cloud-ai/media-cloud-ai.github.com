@@ -1,0 +1,20 @@
+<div class="mermaid">
+graph LR
+ui[fa:fa-user User interface] --> backend(Backend)
+backend[fa:fa-cogs Backend] --> rmq(fa:fa-bars Message broker)
+backend --> DB(fa:fa-database Database)
+rmq --> W1[fa:fa-cog Worker 1]
+rmq --> W2[fa:fa-cog Worker 2]
+rmq --> W3[fa:fa-cog Worker 3]
+
+classDef blue fill:#155799,stroke: none,color: #fff;
+classDef green fill:#159957,stroke: none,color: #fff;
+
+class ui green
+class backend blue
+class rmq blue
+class DB blue
+class W1 green
+class W2 green
+class W3 green
+</div>

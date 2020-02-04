@@ -1,0 +1,5 @@
+- name: Automatic Content Synchronisation
+  description: Synchronise asynchronous transcribed subtitles with the related audio (for French language)
+
+- name: Automatic Content Positioning
+  description: Place subtitles out of pre-existing texts/graphics zones on screen
