@@ -124,6 +124,12 @@ a {
   }
 }
 
+.site-footer {
+  color: $header-heading-color;
+  background-color: $header-bg-color;
+  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+}
+
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
@@ -354,6 +360,7 @@ a {
   padding-top: 2rem;
   margin-top: 2rem;
   border-top: solid 1px $hr-border-color;
+  min-height: 300px;
 
   @include large {
     font-size: 1rem;
@@ -373,6 +380,67 @@ a {
   font-weight: bold;
 }
 
-.site-footer-credits {
-  color: $blockquote-text-color;
+@media screen and (max-width: 64em) and (min-width: 42em) {
+  .site-footer {
+    padding: 3rem 4rem;
+  }
 }
+
+@media screen and (max-width: 42em) {
+  .site-footer {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .site-footer-content {
+    max-width: 64rem;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+  }
+}
+
+.site-footer,
+.site-footer a {
+  color: $footer-text-color;
+  text-decoration: none;
+}
+
+.site-footer-credits img {
+  width: 220px;
+  max-width: 100%;
+  margin-top: 20px;
+  vertical-align: middle;
+}
+
+.site-footer-links .link img {
+  height: 20px !important;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 64em) {
+  .site-footer-content {
+    display: flex;
+  }
+
+  .site-footer-credits {
+    flex: 2;
+  }
+  .site-footer-links {
+    flex: 1;
+  }
+
+  .site-footer-credits,
+  .site-footer-links {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media screen and (max-width: 64em) {
+  .site-footer-links {
+    display: block;
+    margin-top: 2em;
+  }
+}
+
