@@ -25,6 +25,10 @@
   </head>
   <body>
     <header class="page-header" role="banner">
+      <div class="hamburger">
+        <span></span>
+      </div>
+
       <a href="/">
         <img src="/assets/images/{{ page.logo | default: site.logo }}" height="80px"/>
         <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
@@ -62,6 +66,14 @@
     <script type="text/javascript">
       anchors.options.placement = 'left';
       anchors.add('h2, h3, h4, h5, h6');
+
+      var hamburger = document.querySelector('.hamburger');
+      var menu = document.querySelector('.menu');
+      hamburger.onclick = function () {
+          menu.classList.toggle('open');
+          hamburger.classList.toggle('close');
+      };
+
     </script>
   </body>
 </html>
