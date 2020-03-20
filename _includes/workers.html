@@ -22,3 +22,32 @@
     </div>
   </div>
 {% endfor %}
+
+<script type="text/javascript">
+  var url = "https://hub.docker.com/v2/repositories/mediacloudai/rs_manifest_worker/tags/?page_size=25";
+  // var url = "https://backend.media-io.com/";
+  var myHeaders = new Headers();
+  myHeaders.append("Accept", "*/*");
+
+  var configuration = { method: 'GET',
+                 headers: myHeaders,
+                 mode: 'cors',
+                 cache: 'default' };
+
+  fetch(url, configuration)
+  .then(function(response) {
+    var text = response.text()
+    console.log(response, text)
+    return text
+  })
+  .then(function(body) {
+    console.log(body)
+  })
+
+//   var xhr = new XMLHttpRequest();
+//   xhr.onload = function() {
+//            console.log(xhr.responseText);
+//         }
+//   xhr.open('GET', url, true);
+//   xhr.send(null);
+</script>

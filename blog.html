@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<ul class="posts">
+  {% for post in site.posts %}
+    <li class="post">
+      <a href="{{ post.url }}">
+        <h2>
+          {{ post.title }}
+        </h2>
+      </a>
+      <div class="date">
+        {% assign currentdate = post.date %}
+        {% include date.html %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

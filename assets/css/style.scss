@@ -7,6 +7,10 @@
   padding-bottom: 0;
 }
 
+.main-content {
+  min-height: 70vw;
+}
+
 .hamburger span {
   position: relative;
   display: block;
@@ -240,4 +244,14 @@ nav.menu a .item:hover {
 
 .worker .icons {
   text-align: right;
+}
+
+.posts {
+  list-style: none;
+  padding: 0;
+}
+
+.posts .post .date {
+  font-size: 0.8em;
+  color: #888;
 }

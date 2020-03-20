@@ -1,0 +1,23 @@
+<header class="page-header" role="banner">
+  <div class="hamburger">
+    <span></span>
+  </div>
+
+  <a href="/">
+    <img src="/assets/images/{{ page.logo | default: site.logo }}" height="80px"/>
+    <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+  </a>
+  <div class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</div>
+
+  <nav class="menu">
+    {% for menu in site.data.menu %}
+
+      <a href={{menu.link}}>
+        <span 
+          {% if page.url == menu.link %} class="item selected" {% else %} class="item" {% endif %}>
+          {{menu.name}}
+        </span>
+      </a>
+    {% endfor %}
+  </nav>
+</header>
