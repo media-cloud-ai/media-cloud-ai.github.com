@@ -5,8 +5,3 @@ description: The cloud platform to run AI on media content.
 google_analytics:
 theme: jekyll-theme-cayman
 disqus_short_name: mediacloudai
-
-webrick:
-  headers:
-    Access-Control-Allow-Origin: "*"
-    Access-Control-Allow-Methods: "GET, POST, OPTION"

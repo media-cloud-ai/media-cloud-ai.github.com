@@ -73,6 +73,10 @@ nav.menu {
   padding-top: 3em;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 @media screen and (max-width: 42em) {
   nav.menu {
     padding-top: 0.5em;
@@ -249,6 +253,14 @@ nav.menu a .item:hover {
 .posts {
   list-style: none;
   padding: 0;
+}
+
+.posts .post {
+  margin-bottom: 20px;
+}
+
+.posts .post h2 {
+  margin: 0;
 }
 
 .posts .post .date {
