@@ -54,6 +54,14 @@
                     "title": "Set the parameter required",
                     "type": "boolean"
                 },
+                "icon": {
+                    "title": "Set the icon for this parameter",
+                    "type": "string"
+                },
+                "step": {
+                    "title": "Step for float input",
+                    "type": "string"
+                },
                 "items": {
                     "title": "List of choice identifier and value",
                     "type": "array",
