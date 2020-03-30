@@ -60,7 +60,7 @@
                 },
                 "step": {
                     "title": "Step for float input",
-                    "type": "string"
+                    "type": "float"
                 },
                 "items": {
                     "title": "List of choice identifier and value",
