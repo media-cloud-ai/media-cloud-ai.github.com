@@ -1,5 +1,5 @@
 {
-    "$id": "http://localhost:4000/standard/1.1/workflow-definition.schema.json",
+    "$id": "https://media-cloud.ai/standard/1.1/workflow-definition.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
         "start_parameter": {
@@ -25,6 +25,10 @@
                         "number"
                     ]
                 },
+                "accept": {
+                    "title": "A list of acceptable file type",
+                    "type": "string"
+                },
                 "default": {
                     "pattern": "^(.*)$",
                     "title": "Default value of the parameter",
@@ -49,25 +53,29 @@
                     "default": false,
                     "title": "Set the parameter required",
                     "type": "boolean"
+                },
+                "items": {
+                    "title": "List of choice identifier and value",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {"type": "string"},
+                            "label": {"type": "string"}
+                        }
+                    }
                 }
             },
             "required": [
                 "id",
                 "label",
                 "type"
-            ]
+            ],
+            "additionalProperties": false
         },
         "step": {
             "type": "object",
             "properties": {
-                "enable": {
-                    "default": false,
-                    "examples": [
-                        true
-                    ],
-                    "title": "The Enable Schema",
-                    "type": "boolean"
-                },
                 "icon": {
                     "examples": [
                         "file_download"
@@ -92,6 +100,17 @@
                     "title": "The Label Schema",
                     "type": "string"
                 },
+                "mode": {
+                    "pattern": "^(.*)$",
+                    "title": "Mode for this step",
+                    "type": "string",
+                    "default": "one_for_one",
+                    "enum": [
+                        "one_for_many",
+                        "one_for_one",
+                        "notification"
+                    ]
+                },
                 "name": {
                     "examples": [
                         "job_transfer"
@@ -110,7 +129,7 @@
                     "type": "array",
                     "items": { "type": "integer" }
                 },
-                "required": {
+                "required_to_start": {
                     "title": "Reference(s) of required steps to run that step",
                     "type": "array",
                     "items": { "type": "integer" }
@@ -123,7 +142,8 @@
                 "icon",
                 "parameters"
             ],
-            "title": "The Items Schema"
+            "additionalProperties": false,
+            "title": "Step definition"
         },
         "tag": {
             "type": "string",
@@ -141,6 +161,10 @@
             ],
             "pattern": "^([a-z_]+)$",
             "title": "The Identifier of the workflow, used to reference it",
+            "type": "string"
+        },
+        "reference": {
+            "title": "External reference identifier for this workflow, can be UUID, string etc.",
             "type": "string"
         },
         "label": {
@@ -204,6 +228,7 @@
         "parameters",
         "steps"
     ],
+    "additionalProperties": false,
     "title": "Schema of Workflow Definition for Media Cloud AI",
     "type": "object"
 }

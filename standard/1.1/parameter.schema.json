@@ -1,5 +1,5 @@
 {
-    "$id": "http://localhost:4000/standard/1.1/parameter.schema.json",
+    "$id": "https://media-cloud.ai/standard/1.1/parameter.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "properties": {
         "id": {
