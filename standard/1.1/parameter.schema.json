@@ -27,11 +27,6 @@
                 "template"
             ]
         },
-        "enable": {
-          "title": "enable this parameter as editable, by default it's read-only",
-          "type": "boolean",
-          "default": false
-        },
         "default": {},
         "value": {}
     },
