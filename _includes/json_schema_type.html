@@ -1,12 +1,17 @@
 
-{% if include.object.items['$ref'] %}
+{% if include.object.items['$ref'] and include.object.items['$ref'][0] == "#" %}
 <a href="{{include.object.items['$ref'] | replace_first: '/definitions/', ''}}">
+array&lt;{{include.object.items['$ref'] }}&gt;
+</a>
+
+{% elsif include.object.items['$ref'] %}
+<a href="{{include.object.items['$ref'] | replace_first: '.json', ''}}">
 array&lt;{{include.object.items['$ref'] }}&gt;
 </a>
 
 {% elsif include.object.items.type %}
 
-array&lt;{{include.object.items.type }}&gt;
+array&lt;{{include.object.items.type}}&gt;
 
 {% elsif include.object.type[0] %}
 

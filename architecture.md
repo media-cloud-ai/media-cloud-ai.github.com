@@ -33,7 +33,7 @@ class job blue
 </div>
 
 
-Complete workflow documentation of the schema is described [here](/workflow-definition).
+Complete workflow documentation of the schema is described [here](/workflow-definition.schema).
 
 ### Messaging protocol
 
