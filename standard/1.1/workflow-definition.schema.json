@@ -62,6 +62,10 @@
                     "title": "Step for float input",
                     "type": "number"
                 },
+                "work_dir": {
+                    "title": "Overwrite de default workers work directory",
+                    "type": "string"
+                },
                 "items": {
                     "title": "List of choice identifier and value",
                     "type": "array",
