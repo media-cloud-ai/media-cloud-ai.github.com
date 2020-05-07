@@ -153,6 +153,10 @@
                     "title": "Reference(s) of required steps to run that step",
                     "type": "array",
                     "items": { "type": "integer" }
+                },
+                "work_dir": {
+                    "title": "Overwrite the default workdir for this step",
+                    "type": "string"
                 }
             },
             "required": [
