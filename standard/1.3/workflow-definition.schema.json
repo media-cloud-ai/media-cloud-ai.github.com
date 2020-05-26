@@ -140,7 +140,7 @@
                     "type": "string"
                 },
                 "condition": {
-                    "title": "Boolean condition, if true, starts the step, if false, skips.",
+                    "title": "Expression which requires to return a boolean. On false condition, the step will be skipped.",
                     "type": "string"
                 },
                 "parameters": {
