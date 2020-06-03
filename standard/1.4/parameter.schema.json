@@ -28,6 +28,13 @@
                 "template"
             ]
         },
+        "store": {
+            "examples": [
+                "BACKEND"
+            ],
+            "title": "The Identifier of the store from which the parameter value can be resolved (as a credential)",
+            "type": "string"
+        },
         "default": {},
         "value": {}
     },
