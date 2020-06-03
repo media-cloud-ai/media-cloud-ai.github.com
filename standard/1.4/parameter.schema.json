@@ -32,6 +32,7 @@
             "examples": [
                 "BACKEND"
             ],
+            "pattern": "^([A-Z0-9_]+)$",
             "title": "The Identifier of the store from which the parameter value can be resolved (as a credential)",
             "type": "string"
         },
