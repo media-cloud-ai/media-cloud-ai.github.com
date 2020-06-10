@@ -4,7 +4,7 @@ layout: default
 
 ### Architecture
 
-The platform is split into micro-services, each one providing specific function.
+The platform is splitted into micro-services, each one providing a specific function.
 
 {% include mermaid_schemas/main_architecture.html %}
 
@@ -14,7 +14,7 @@ The core component is the backend, which provides user management, workflow engi
 
 ### Workflows
 
-The backend manage workflows structured like that:
+The backend component manages workflows structured like that:
 - **Workflow**: a description including a list of steps
   - **Step**: static declaration of a process
     - **Job**: instance of a step, many jobs can be generated at the runtime for 1 step (1 per file for example)
@@ -38,7 +38,7 @@ Complete workflow documentation of the schema is described [here](/workflow-defi
 ### Messaging protocol
 
 A communication standard is required to match messages between backend and workers.
-To ensure the quality of integration, it's recommended to use everywhere [rs_amqp_worker](https://github.com/media-cloud-ai/rs_amqp_worker/) which provide a worker SDK.
+To ensure the quality of integration, it is recommended to use everywhere [rs_amqp_worker](https://github.com/media-cloud-ai/rs_amqp_worker/) which provides a worker SDK.
 
 All details about communication between the backend and workers is detailed [here](/messaging_protocol.html).
 
