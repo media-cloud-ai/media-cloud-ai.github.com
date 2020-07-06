@@ -2,5 +2,5 @@
 layout: default
 ---
 
-{% assign schema = site.data.standard['15']['parameterschema'] %}
+{% assign schema = site.data.standard['16']['parameterschema'] %}
 {% include json_schema.html %}
