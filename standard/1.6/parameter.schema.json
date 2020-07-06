@@ -1,5 +1,5 @@
 {
-    "$id": "https://media-cloud.ai/standard/1.5/parameter.schema.json",
+    "$id": "https://media-cloud.ai/standard/1.6/parameter.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "properties": {
         "id": {
