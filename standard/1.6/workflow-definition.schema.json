@@ -16,7 +16,6 @@
                     "type": "string"
                 },
                 "type": {
-                    "pattern": "^(.*)$",
                     "title": "Type of the data value for this parameter",
                     "type": "string",
                     "enum": [
@@ -114,7 +113,6 @@
                     "type": "string"
                 },
                 "mode": {
-                    "pattern": "^(.*)$",
                     "title": "Mode for this step",
                     "type": "string",
                     "default": "one_for_one",
