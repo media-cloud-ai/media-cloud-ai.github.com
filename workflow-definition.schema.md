@@ -2,5 +2,5 @@
 layout: default
 ---
 
-{% assign schema = site.data.standard['16']['workflow-definitionschema'] %}
+{% assign schema = site.data.standard['17']['workflow-definitionschema'] %}
 {% include json_schema.html %}
