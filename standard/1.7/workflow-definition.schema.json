@@ -1,5 +1,5 @@
 {
-    "$id": "https://media-cloud.ai/standard/1.6/workflow-definition.schema.json",
+    "$id": "https://media-cloud.ai/standard/1.7/workflow-definition.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
         "start_parameter": {
