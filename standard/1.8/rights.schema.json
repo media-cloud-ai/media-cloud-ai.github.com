@@ -45,6 +45,6 @@
         "delete"
     ],
     "additionalProperties": false,
-    "title": "User rights to manipulate a workflow",
+    "title": "User rights to manipulate the workflow",
     "type": "object"
 }
