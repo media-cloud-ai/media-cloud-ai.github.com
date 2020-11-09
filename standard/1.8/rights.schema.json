@@ -1,0 +1,50 @@
+{
+    "$id": "https://media-cloud.ai/standard/1.8/rights.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "right": {
+            "type": "array",
+            "items": {
+                "type":"string",
+                "pattern": "\\w+"
+            }
+        }
+    },
+    "properties": {
+        "view": {
+            "type":"array",
+            "title": "User tags to have the right to view the workflow",
+            "items": { "$ref": "#/definitions/right" }
+        },
+        "create": {
+            "type":"array",
+            "title": "User tags to have the right to create the workflow",
+            "items": { "$ref": "#/definitions/right" }
+        },
+        "retry": {
+            "type":"array",
+            "title": "User tags to have the right to retry the workflow",
+            "items": { "$ref": "#/definitions/right" }
+        },
+        "abort": {
+            "type":"array",
+            "title": "User tags to have the right to abort the workflow",
+            "items": { "$ref": "#/definitions/right" }
+        },
+        "delete": {
+            "type":"array",
+            "title": "User tags to have the right to delete the workflow",
+            "items": { "$ref": "#/definitions/right" }
+        }
+    },
+    "required": [
+        "view",
+        "create",
+        "retry",
+        "abort",
+        "delete"
+    ],
+    "additionalProperties": false,
+    "title": "User rights to manipulate a workflow",
+    "type": "object"
+}
