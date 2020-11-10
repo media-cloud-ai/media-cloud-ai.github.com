@@ -251,7 +251,7 @@
         },
         "rights": {
             "title":"User rights to manipulate the workflow",
-            "$ref": "parameter.schema.json#"
+            "$ref": "rights.schema.json#"
         }
     },
     "required": [
