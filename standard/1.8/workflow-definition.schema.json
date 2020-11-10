@@ -263,7 +263,8 @@
         "version_micro",
         "tags",
         "parameters",
-        "steps"
+        "steps",
+        "rights"
     ],
     "additionalProperties": false,
     "title": "Schema of Workflow Definition for Media Cloud AI",

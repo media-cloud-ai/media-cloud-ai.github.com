@@ -2,7 +2,7 @@
     "$id": "https://media-cloud.ai/standard/1.8/rights.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
-        "right": {
+        "group": {
             "type": "array",
             "items": {
                 "type":"string",
@@ -13,28 +13,28 @@
     "properties": {
         "view": {
             "type":"array",
-            "title": "User tags to have the right to view the workflow",
-            "items": { "$ref": "#/definitions/right" }
+            "title": "User tags to have the group to view the workflow",
+            "items": { "$ref": "#/definitions/group" }
         },
         "create": {
             "type":"array",
-            "title": "User tags to have the right to create the workflow",
-            "items": { "$ref": "#/definitions/right" }
+            "title": "User tags to have the group to create the workflow",
+            "items": { "$ref": "#/definitions/group" }
         },
         "retry": {
             "type":"array",
-            "title": "User tags to have the right to retry the workflow",
-            "items": { "$ref": "#/definitions/right" }
+            "title": "User tags to have the group to retry the workflow",
+            "items": { "$ref": "#/definitions/group" }
         },
         "abort": {
             "type":"array",
-            "title": "User tags to have the right to abort the workflow",
-            "items": { "$ref": "#/definitions/right" }
+            "title": "User tags to have the group to abort the workflow",
+            "items": { "$ref": "#/definitions/group" }
         },
         "delete": {
             "type":"array",
-            "title": "User tags to have the right to delete the workflow",
-            "items": { "$ref": "#/definitions/right" }
+            "title": "User tags to have the group to delete the workflow",
+            "items": { "$ref": "#/definitions/group" }
         }
     },
     "required": [
@@ -45,6 +45,6 @@
         "delete"
     ],
     "additionalProperties": false,
-    "title": "User rights to manipulate the workflow",
+    "title": "User group to manipulate the workflow",
     "type": "object"
 }
