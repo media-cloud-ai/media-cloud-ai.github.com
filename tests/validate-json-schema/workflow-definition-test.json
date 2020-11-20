@@ -13,7 +13,6 @@
     ],
     "steps": [
         {
-            "enable": true,
             "icon": "clean_vegies",
             "id": 0,
             "label": "Clean vegetables",
@@ -27,7 +26,6 @@
             ]
         },
         {
-            "enable": true,
             "icon": "cook_vegies",
             "id": 0,
             "label": "Cook vegetables",
@@ -42,11 +40,28 @@
             "parent_ids": [
                 0
             ],
-            "required": [
+            "required_to_start": [
                 0
             ]
         }
     ],
+    "rights": {
+        "view": [
+            "group"
+        ],
+        "create": [
+            "group"
+        ],
+        "retry": [
+            "group"
+        ],
+        "abort": [
+            "group"
+        ],
+        "delete": [
+            "group"
+        ]
+    },
     "tags": [
         "toto"
     ],

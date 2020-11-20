@@ -1,5 +1,5 @@
 {
-    "$id": "https://media-cloud.ai/standard/1.6/workflow-definition.schema.json",
+    "$id": "https://media-cloud.ai/standard/1.8/workflow-definition.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
         "start_parameter": {
@@ -16,6 +16,7 @@
                     "type": "string"
                 },
                 "type": {
+                    "pattern": "^(.*)$",
                     "title": "Type of the data value for this parameter",
                     "type": "string",
                     "enum": [
@@ -113,6 +114,7 @@
                     "type": "string"
                 },
                 "mode": {
+                    "pattern": "^(.*)$",
                     "title": "Mode for this step",
                     "type": "string",
                     "default": "one_for_one",
@@ -246,6 +248,10 @@
         "version_micro": {
             "title": "Micro version of this Workflow definition",
             "type": "integer"
+        },
+        "rights": {
+            "title":"User rights to manipulate the workflow",
+            "$ref": "rights.schema.json#"
         }
     },
     "required": [
@@ -257,7 +263,8 @@
         "version_micro",
         "tags",
         "parameters",
-        "steps"
+        "steps",
+        "rights"
     ],
     "additionalProperties": false,
     "title": "Schema of Workflow Definition for Media Cloud AI",
