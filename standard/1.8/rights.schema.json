@@ -1,50 +1,37 @@
 {
     "$id": "https://media-cloud.ai/standard/1.8/rights.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "definitions": {
-        "group": {
-            "type": "array",
-            "items": {
-                "type":"string",
-                "pattern": "\\w+"
+    "type": "array",
+    "items": {
+        "title": "Associated groups and action",
+        "type": "object",
+        "properties": {
+            "action": {
+                "title": "Possible action to perform on stepflow",
+                "type": "string",
+                "enum": [
+                    "abort",
+                    "create",
+                    "delete",
+                    "retry",
+                    "update",
+                    "view"
+                ]
+            },
+            "groups": {
+                "title": "List of group associated to an action",
+                "type": "array",
+                "items": {
+                    "type":"string",
+                    "pattern": "\\w+"
+                }
             }
-        }
+        },
+        "required": [
+            "action",
+            "groups"
+        ]
     },
-    "properties": {
-        "view": {
-            "type":"array",
-            "title": "User tags to have the group to view the workflow",
-            "items": { "$ref": "#/definitions/group" }
-        },
-        "create": {
-            "type":"array",
-            "title": "User tags to have the group to create the workflow",
-            "items": { "$ref": "#/definitions/group" }
-        },
-        "retry": {
-            "type":"array",
-            "title": "User tags to have the group to retry the workflow",
-            "items": { "$ref": "#/definitions/group" }
-        },
-        "abort": {
-            "type":"array",
-            "title": "User tags to have the group to abort the workflow",
-            "items": { "$ref": "#/definitions/group" }
-        },
-        "delete": {
-            "type":"array",
-            "title": "User tags to have the group to delete the workflow",
-            "items": { "$ref": "#/definitions/group" }
-        }
-    },
-    "required": [
-        "view",
-        "create",
-        "retry",
-        "abort",
-        "delete"
-    ],
     "additionalProperties": false,
-    "title": "User group to manipulate the workflow",
-    "type": "object"
+    "title": "User groups to manipulate the workflow"
 }
