@@ -217,6 +217,11 @@
             "title": "The icon used with the label. One of https://material.io/resources/icons/",
             "type": "string"
         },
+        "is_live": {
+            "items": { "$ref": "#/definitions/is_live" },
+            "title": "Define if the workflow is a live workflow or not (default: false)",
+            "type": "boolean"
+        },
         "start_parameters": {
             "items": { "$ref": "#/definitions/start_parameter" },
             "title": "Definition of available parameters to start the workflow definition",
