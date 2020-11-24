@@ -220,7 +220,8 @@
         "is_live": {
             "items": { "$ref": "#/definitions/is_live" },
             "title": "Define if the workflow is a live workflow or not (default: false)",
-            "type": "boolean"
+            "type": "boolean",
+            "default": "false"
         },
         "start_parameters": {
             "items": { "$ref": "#/definitions/start_parameter" },
