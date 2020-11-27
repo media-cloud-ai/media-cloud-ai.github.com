@@ -188,6 +188,13 @@
         }
     },
     "properties": {
+        "schema_version": {
+            "type": "string",
+            "title": "Version of the schema used to decribe this workflow",
+            "enum": [
+                "1.8"
+            ]
+        },
         "identifier": {
             "examples": [
                 "speech_to_text"
@@ -260,6 +267,7 @@
         }
     },
     "required": [
+        "schema_version",
         "identifier",
         "label",
         "icon",
