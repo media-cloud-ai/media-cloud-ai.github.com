@@ -89,6 +89,14 @@
         "step": {
             "type": "object",
             "properties": {
+                "allow_failure": {
+                    "default": false,
+                    "examples": [
+                        true
+                    ],
+                    "title": "Allow step failure",
+                    "type": "boolean"
+                },
                 "icon": {
                     "examples": [
                         "file_download"
