@@ -4,6 +4,10 @@
     "definitions": {
         "notification_hook": {
             "properties": {
+                "label": {
+                    "type": "string",
+                    "title": "Label for the Notification url"
+                },
                 "endpoint": {
                     "type": "string",
                     "title": "Endpoint for the Notification url"
