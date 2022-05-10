@@ -3,21 +3,26 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
         "notification_hook": {
+            "type": "object",
             "properties": {
                 "label": {
                     "type": "string",
-                    "title": "Label for the Notification url"
+                    "title": "Label for the Notification"
                 },
                 "endpoint": {
                     "type": "string",
-                    "title": "Endpoint for the Notification url"
+                    "title": "Endpoint for the Notification"
                 },
                 "credentials": {
                     "type": "string",
-                    "title": "Credentials for notification_hook"
+                    "title": "Credentials for the Notification"
                 }
             },
-            "type": "object"
+            "required": [
+                "label",
+                "endpoint"
+            ],
+            "additionalProperties": false
         },
         "start_parameter": {
             "type": "object",
@@ -264,11 +269,11 @@
             "type": "boolean",
             "default": "false"
         },
-        "notification_hook": {
+        "notification_hooks": {
             "items": {
                 "$ref": "#/definitions/notification_hook"
             },
-            "title": "Define if the workflow has a specific endpoint for notification (default: nil)",
+            "title": "Define Notifications for the workflow",
             "type": "array"
         },
         "start_parameters": {
