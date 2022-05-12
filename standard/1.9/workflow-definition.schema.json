@@ -198,7 +198,7 @@
     "properties": {
         "schema_version": {
             "type": "string",
-            "title": "Version of the schema used to decribe this workflow",
+            "title": "Version of the schema used to describe this workflow",
             "enum": [
                 "1.9"
             ]

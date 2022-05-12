@@ -1,5 +1,5 @@
 {
-    "$id": "https://raw.githubusercontent.com/tlouvart/media-cloud-ai.github.com/master/standard/1.10/workflow-definition.schema.json",
+    "$id": "https://media-cloud.ai/standard/1.10/workflow-definition.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
         "notification_hook": {
@@ -229,9 +229,8 @@
     "properties": {
         "schema_version": {
             "type": "string",
-            "title": "Version of the schema used to decribe this workflow",
+            "title": "Version of the schema used to describe this workflow",
             "enum": [
-                "1.9",
                 "1.10"
             ]
         },
