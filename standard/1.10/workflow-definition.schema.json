@@ -231,6 +231,7 @@
             "type": "string",
             "title": "Version of the schema used to describe this workflow",
             "enum": [
+                "1.9",
                 "1.10"
             ]
         },
