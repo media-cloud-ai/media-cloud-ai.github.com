@@ -87,7 +87,9 @@ When your development is complete, push your branch on the remote Gitlab reposit
 
 You must __assign yourself as an Assignee__: meaning that you are responsible for the changes proposed, and you will be in charge of merging the branch into the target branch.
 
-You also have to __assign the issuer or a competent* developer as a Reviewer__: this person has to review your code, may request some changes, and is responsible for the final approval.
+You can mark the Merge Request as _Draft_, if you consider it is not ready for a review.
+
+When the Merge Request is ready, you have to request a review by __assigning the issuer or a relevant* developer as a Reviewer__: this person has to review your code, may request some changes, and is responsible for the final approval.
 
 You should also check the Continous Integration (CI) pipeline results: __all CI jobs must have succeeded__ before your branch can be merged.
 
