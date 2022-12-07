@@ -7,6 +7,17 @@ layout: default
 
 The Media-Cloud AI source code is hosted on the [https://gitlab.com/media-cloud-ai](https://gitlab.com/media-cloud-ai) Gitlab group.
 
+The project is organised arround the following subgroups :
+  - _Backbone_: some MCAI-related tools configuration
+  - _Backend_: the MCAI Web platform sources
+  - _Command Line Tools_: some CLI applications to interact with the MCAI environment
+  - _Continuous Integration_: CI pipelines and runners definitions
+  - _Documentation_: for the MCAI Web Site
+  - _Libraries_: common libraries sources
+  - _SDKs_: Rust and Python SDKs for MCAI workers
+  - _Startup_: MCAI deployment utilities
+  - _Workers_: MCAI workers
+
 ### Bug reports
 
 _To be defined_
