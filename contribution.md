@@ -1,3 +1,4 @@
+
 ---
 layout: default
 ---
@@ -24,7 +25,7 @@ This document aims to define some rules that <ins>must be followed as strictly a
 
 As the main tool for sharing Media-Cloud AI code, the use of Git must be given special attention.
 
-The organization of the different Git projects of Media-Cloud AI is based on the [git-flow](https://git-flow.readthedocs.io/en/latest/presentation.html) philosophy. This is mainly involves that each contribution (feature, fix, hotfix or release) has its own branch, based on a main branch (`main` (formerly `master`) or `develop`, or both).
+The organization of the different Git projects of Media-Cloud AI is based on the [git-flow](https://git-flow.readthedocs.io/en/latest/presentation.html) philosophy. This mainly involves that each contribution (feature, fix, hotfix or release) has its own branch, based on a main branch (`main` (formerly `master`) or `develop`, or both).
 
 #### Branch naming rule:
 
@@ -70,24 +71,30 @@ Before starting your contribution, please ensure your Gitlab profile shares the 
 
 #### Issues:
 
-Each contribution must be linked to an issue on the related Gitlab repository.
+__Each contribution must be linked to an Issue__ on the related Gitlab repository.
 
 This means that, as an example, if you found a bug:
 
- 1. Check whether an issue already exists regarding this bug
- 2. If necessary, create a new issue to report the bug
- 3. Create a new branch with a name based on the title of the issue (see the [Branch naming rule](#branch-naming-rule) section)
+ 1. Check whether an Issue already exists regarding this bug
+ 2. If necessary, create a new Issue to report the bug
+    a. Choose an explicit title
+    b. Explicit the Issue into the description
+    c. Don't hesitate to split the Issue into multiple unit tasks
+    d. Apply the appropiate [labels](https://gitlab.com/groups/media-cloud-ai/-/labels)
+ 3. Create a new branch with a name based on the title of the Issue (see the [Branch naming rule](#branch-naming-rule) section)
  4. Start commiting patches to fix this bug
 
 #### Merge Requests:
 
-Each contribution must result in a Merge Request on the related Gitlab repository.
+__Each contribution must result in a Merge Request__ on the related Gitlab repository. __Each Merge Request must be related to an existing Issue__.
 
 When your development is complete, push your branch on the remote Gitlab repository, and create a Merge Request targeting a main branch (`develop` or `main`).
 
 You must __assign yourself as an Assignee__: meaning that you are responsible for the changes proposed, and you will be in charge of merging the branch into the target branch.
 
 You can mark the Merge Request as _Draft_, if you consider it is not ready for a review.
+
+You can also use labels to improve the Merge Request understanding and indexation.
 
 When the Merge Request is ready, you have to request a review by __assigning the issuer or a relevant* developer as a Reviewer__: this person has to review your code, may request some changes, and is responsible for the final approval.
 
@@ -99,7 +106,7 @@ Once the Merge Request is approved (and the CI pipeline succeeded), you can merg
 
 Finally, you can close the related issue.
 
-\* _someone that will be able to understand the purpose of your Merge Request_
+\* _someone that will be able to understand the purpose of your Merge Request, or at least a member of the Q&A team (if any)_
 
 #### Roadmap, Milestones and release management
 
@@ -113,13 +120,13 @@ When the release candidate is compliant to what is expected, the release branch 
 
 ### To sum up:
 
- 1. Find or create an issue
+ 1. Find or create an Issue
  2. Create a related branch
  3. Commit properly: <ins>explicit labels</ins>, project still compiling
  4. Push your branch
  5. Create a Merge Request (MR), and ask for a review
  6. Follow/discuss the comments of the reviewer, commit & push corrections
  7. Once the MR is approved, merge your branch into the target branch
- 8. Close the related issue
+ 8. Congrats! You (or the issuer) may now close the related issue.
 
 ---
