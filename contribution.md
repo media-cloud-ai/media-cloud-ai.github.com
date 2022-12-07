@@ -83,7 +83,7 @@ This means that, as an example, if you found a bug:
 
 Each contribution must result in a Merge Request on the related Gitlab repository.
 
-When your development is complete, push your branch on the remote Gitlab repository, and create a Merge Request targetting a main branch (`develop` or `main`).
+When your development is complete, push your branch on the remote Gitlab repository, and create a Merge Request targeting a main branch (`develop` or `main`).
 
 You must __assign yourself as an Assignee__: meaning that you are responsible for the changes proposed, and you will be in charge of merging the branch into the target branch.
 
@@ -91,13 +91,23 @@ You can mark the Merge Request as _Draft_, if you consider it is not ready for a
 
 When the Merge Request is ready, you have to request a review by __assigning the issuer or a relevant* developer as a Reviewer__: this person has to review your code, may request some changes, and is responsible for the final approval.
 
-You should also check the Continous Integration (CI) pipeline results: __all CI jobs must have succeeded__ before your branch can be merged.
+You should also check the Continuous Integration (CI) pipeline results: __all CI jobs must have succeeded__ before your branch can be merged.
+
+Please be sure to have your branch rebased on the target branch in order to have the correct commit history. In addition, you should rebase your own commits so the commit history keeps clean and clear (eg. remove the `wip` or `fix` commits).
 
 Once the Merge Request is approved (and the CI pipeline succeeded), you can merge your branch into the target branch.
 
 Finally, you can close the related issue.
 
 \* _someone that will be able to understand the purpose of your Merge Request_
+
+#### Roadmap, Milestones and release management
+
+Upstream of any new release, a roadmap will be determined by project owners with the content of this new release.
+
+When all the features contained in the milestone are ready, a release branch is created from the `develop` branch and a release candidate version is tagged from it. Possibly, fixes are pushed in this release branch followed by another release candidate version.
+
+When the release candidate is compliant to what is expected, the release branch is merged in both `main` and `develop` branches.
 
 ---
 
