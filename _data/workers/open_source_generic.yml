@@ -1,0 +1,34 @@
+- name: Command line worker
+  description: to execute any command available
+  gitlab: media-cloud-ai/workers/generic/rs_command_line_worker
+  gitlab_docker: media-cloud-ai/workers/generic/rs_command_line_worker
+
+- name: Transfer worker
+  description: move files across S3, GCS, FTP, HTTP, local storage
+  gitlab: media-cloud-ai/workers/generic/rs_transfer_worker
+  gitlab_docker: media-cloud-ai/workers/generic/rs_transfer_worker
+
+- name: File System worker
+  description: list, remove, copy files
+  gitlab: media-cloud-ai/workers/generic/rs_file_system_worker
+  gitlab_docker: media-cloud-ai/workers/generic/rs_file_system_worker
+
+- name: AWS CLI worker
+  description: execute AWS action with aws2
+  gitlab: media-cloud-ai/workers/generic/aws_cli_worker
+  docker: edia-cloud-ai/workers/generic/aws_cli_worker
+
+- name: JSON Transformation worker
+  description: Transform JSON to JSON using template (based on jq tool)
+  gitlab: media-cloud-ai/workers/generic/rs_json_transform_worker
+  gitlab_docker: media-cloud-ai/workers/generic/rs_json_transform_worker
+
+- name: Sleeper worker
+  description: A demo/dev worker that sleeps
+  gitlab: media-cloud-ai/workers/generic/rs_sleeper_worker
+  gitlab_docker: media-cloud-ai/workers/generic/rs_sleeper_worker
+
+- name: OCR Frequency Extractor worker
+  description: Python worker to extract text recognized by rs_text_recognition_worker
+  gitlab: media-cloud-ai/workers/generic/py_ocr_frequency_extractor
+  gitlab_docker: media-cloud-ai/workers/generic/py_ocr_frequency_extractor

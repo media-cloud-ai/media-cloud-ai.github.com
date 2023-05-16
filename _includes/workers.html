@@ -20,9 +20,14 @@
       </a>
       {% endif %}
       {% if worker.docker %}
-        <a href="https://hub.docker.com/repository/docker/{{worker.docker}}" target="_blank">
-          <img src="/assets/images/docker.svg" width="15px"/>
-        </a>
+      <a href="https://hub.docker.com/repository/docker/{{worker.docker}}" target="_blank">
+        <img src="/assets/images/docker.svg" width="15px"/>
+      </a>
+      {% endif %}
+      {% if worker.gitlab_docker %}
+      <a href="https://gitlab.com/{{worker.gitlab_docker}}/container_registry" target="_blank">
+        <img src="/assets/images/docker.svg" width="15px"/>
+      </a>
       {% endif %}
     </div>
   </div>

@@ -1,0 +1,9 @@
+- name: Object Detection Worker
+  description: Detection of objects in video using OpenCV Yolo v3
+  gitlab: media-cloud-ai/workers/generic/py_object_detection_worker
+  gitlab_docker: media-cloud-ai/workers/generic/py_object_detection_worker
+
+- name: Text Recognition worker
+  description: Txt recognition based on Tesseract library
+  gitlab: media-cloud-ai/workers/generic/rs_text_recognition_worker
+  gitlab_docker: media-cloud-ai/workers/generic/rs_text_recognition_worker

@@ -1,0 +1,39 @@
+- name: Media Probe worker
+  description: Perform a FFprobe on local or remote videos
+  gitlab: media-cloud-ai/workers/media/rs_media_probe_worker
+  gitlab_docker: media-cloud-ai/workers/media/rs_media_probe_worker
+
+- name: Media Splitter worker
+  description: Split a media into multiple segments, it can also select a part of the content
+  gitlab: media-cloud-ai/workers/media/rs_media_splitter_worker
+  gitlab_docker: media-cloud-ai/workers/media/rs_media_splitter_worker
+
+- name: Subtitle Factory worker
+  description: Format and refactor subtitles.
+  gitlab: media-cloud-ai/workers/media/rs_subtitle_factory_worker
+  gitlab_docker: media-cloud-ai/workers/media/rs_subtitle_factory_worker
+
+- name: Transcript worker
+  description: Worker to process Transcript using different providers
+  gitlab: media-cloud-ai/workers/media/rs_transcript_worker
+  gitlab_docker: media-cloud-ai/workers/media/rs_transcript_worker
+
+- name: FFMpeg worker
+  description: Manipulate any video and audio formats
+  gitlab: media-cloud-ai/workers/media/rs_ffmpeg_worker
+  gitlab_docker: media-cloud-ai/workers/media/rs_ffmpeg_worker
+
+- name: ADM Engine worker
+  description: Renderer for Object-Based Audio ([ITU-R BS.2076-1](https://www.itu.int/rec/R-REC-BS.2076-1-201706-I/fr))
+  gitlab: media-cloud-ai/workers/media/adm-engine-worker
+  gitlab_docker: media-cloud-ai/workers/media/adm-engine-worker
+
+- name: TTconv worker
+  description: Timed Text converter based on ttconv library
+  gitlab: media-cloud-ai/workers/media/py_ttconv_worker
+  gitlab_docker: media-cloud-ai/workers/media/py_ttconv_worker
+
+- name: HLS Playlist Maker worker
+  description: Generator of live HLS (.m3u8) playlist
+  gitlab: media-cloud-ai/workers/media/rs-hls-playlist-maker-worker
+  gitlab_docker: media-cloud-ai/workers/media/rs-hls-playlist-maker-worker

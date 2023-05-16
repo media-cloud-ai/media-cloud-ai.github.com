@@ -4,12 +4,14 @@ layout: default
 
 # Open Source Workers
 
-{% assign workers = site.data.workers.open_source %}
+## Generic workers
+{% assign workers = site.data.workers.open_source_generic %}
 {% include workers.html %}
 
-# Available workers under license
+## Media workers
+{% assign workers = site.data.workers.open_source_media %}
+{% include workers.html %}
 
-## Co-property of Telecom SudParis & France Télévisions:
-
-{% assign workers = site.data.workers.france_television_and_telecom_sud_paris %}
+## Artificial Intelligence workers
+{% assign workers = site.data.workers.open_source_ai %}
 {% include workers.html %}
