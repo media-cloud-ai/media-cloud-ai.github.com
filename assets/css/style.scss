@@ -267,3 +267,8 @@ nav.menu a .item:hover {
   font-size: 0.8em;
   color: #888;
 }
+
+.site-footer-credits img {
+  max-height: 100px;
+  object-fit: contain;
+}
