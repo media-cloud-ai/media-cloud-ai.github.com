@@ -1,10 +1,10 @@
 - name: Command line worker
   description: to execute any command available
-  github: media-cloud-ai/rs_command_line_worker
+  gitlab: media-cloud-ai/workers/generic/rs_command_line_worker
   docker: mediacloudai/rs_command_line_worker
 
 - name: Transfer worker
-  description: move files across S3, FTP, HTTP, local storage
+  description: move files across S3, GCS, FTP, HTTP, local storage
   github: media-cloud-ai/rs_transfer_worker
   docker: mediacloudai/rs_transfer_worker
 

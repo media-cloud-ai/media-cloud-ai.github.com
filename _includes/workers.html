@@ -10,13 +10,18 @@
     {% endif %}
     <div class="icons">
       {% if worker.github %}
-        <a href="https://github.com/{{worker.github}}">
-          <img src="/assets/images/github.svg" width="15px" target="_blank"/>
-        </a>
+      <a href="https://github.com/{{worker.github}}" target="_blank">
+        <img src="/assets/images/github.svg" width="15px"/>
+      </a>
+      {% endif %}
+      {% if worker.gitlab %}
+      <a href="https://gitlab.com/{{worker.gitlab}}" target="_blank">
+        <img src="/assets/images/gitlab.svg" width="15px"/>
+      </a>
       {% endif %}
       {% if worker.docker %}
-        <a href="https://hub.docker.com/repository/docker/{{worker.docker}}">
-          <img src="/assets/images/docker.svg" width="15px" target="_blank"/>
+        <a href="https://hub.docker.com/repository/docker/{{worker.docker}}" target="_blank">
+          <img src="/assets/images/docker.svg" width="15px"/>
         </a>
       {% endif %}
     </div>
