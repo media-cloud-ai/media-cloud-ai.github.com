@@ -1,6 +1,10 @@
 - name: Home
   link: /
 
+- name: Use cases
+  link: /use_cases.html
+
+
 - name: Architecture
   link: /architecture.html
 
